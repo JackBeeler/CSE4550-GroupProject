@@ -1,0 +1,371 @@
+﻿
+
+body{
+margin: auto;
+  hieght: auto;
+    font-family: "Yantramanav", sans-serif;
+}
+
+.
+
+/*navigation*/
+
+.img-fluid{
+	display: block;
+	width: auto;
+}
+.top-header{
+	 background-image: url('images/top_header.png');
+    background-repeat: no-repeat;
+    background-size: cover ;
+	  margin:  auto;
+     height:     auto;  
+	max-width: 1920px;
+	
+}
+.headerr{
+	
+	margin: auto;
+	max-width: 1920px;
+}
+
+.nav-container .wrapper {
+	
+    max-width: 1920px;
+    margin:  auto;
+     height:     auto;
+	
+	
+}
+
+.nav-container {
+    background-image: url('images/button_header.png');
+    background-repeat: no-repeat;
+    background-size:cover ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+	
+	margin: auto;
+	hieght: auto;
+	max-width: 1920px;
+		
+	
+    
+}
+
+.nav2-container {
+	
+    background-image: url('images/dealer_image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 855px;
+	max-height: auto;
+	margin: auto;
+	position: relative;
+	max-width: 1920px;
+	
+    
+	
+	
+}
+
+
+
+
+.nav3-container{
+	max-width: 1920px;
+	margin: auto;
+	
+    align-items: center;
+    justify-content: space-between;
+	
+}
+
+ 
+
+.search-box {
+	
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 120px;
+	
+
+	
+	
+	
+	
+
+	
+	
+}
+
+.search-box  button {
+  
+ 
+ 
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+	
+}
+
+.search-box input button:hover {
+  background: #18961B;
+}
+.search-box input{
+	padding: 15px;
+	
+	padding-right: 50vw;
+	background-color: #313131;
+	
+	color: #FBFBFB;
+	border-radius: 25px;
+	border-width: thick;
+	font-weight: bolder;
+	font-family: Roboto, sans-serif;
+	
+	
+	
+	
+}
+
+nav{
+	margin: auto;
+	
+}
+
+nav ul{
+    display: flex;
+	align-content: center;
+	
+	
+	
+}
+
+.top_nav_items{
+	
+	white-space: nowrap;
+	max-width: 1920px;
+	
+}
+
+
+.top_nav_items li {
+    list-style: none;
+	padding-top: 165px;
+
+   
+	
+}
+#Carosoul1{
+	margin: auto;
+max-width: 1920px;
+
+}
+.top_nav_items li:nth-last-of-type(1) {
+}
+
+.top_nav_items li a{
+color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 22px;
+text-decoration: none;
+margin-right: 90px;
+
+
+}
+.car_nav_items li{
+	margin: auto;
+}
+.car_nav_items {
+	background:#161616;
+	margin: auto;
+	max-width: 3000px;
+	list-style: none;
+	border: 2px solid white;
+	
+
+}
+.car_nav_items li a{
+	color: #FBFBFB;
+	white-space: nowrap
+font-family: Roboto, sans-serif;
+margin-right: 150px;
+font-size: 30px;
+	
+
+}
+	
+
+.middle_nav_items{
+	
+	
+}
+
+
+.middle_nav_items li {
+	
+	list-style-type: none;
+	align-content: center;
+	align-items: center;
+	position: relative;
+	padding-left: auto;
+	margin: auto;
+	
+	
+	 
+	
+	
+	
+	
+	
+	
+}
+
+.middle_nav_items li button {
+	color: #000000;
+font-family: Roboto, sans-serif;
+	white-space: nowrap;
+font-size: 29px;
+background: #F2F2F2;
+padding-left: 50px;
+padding-right: 50px;
+margin-left: 5vw;
+outline-style: none;
+border-radius: 12px;
+font-weight: fine;
+	cursor: pointer;
+	
+
+}
+
+.wrapper nav .middle_nav_items{
+
+	
+	position: absolute;
+	
+}
+
+.botimage  {
+	margin: auto;
+	max-width: 1920px;
+	
+	
+	
+	
+}
+.botimage img {
+	position: absolute;
+	margin: auto;
+	
+
+}
+
+.bot-header{
+	//background-color: green;
+	display: flex;
+	align-content: space-between;
+	
+	position: relative;
+}
+
+.bot-container {
+	position: relative;
+	margin: auto;
+	max-width: 1920px;
+	
+}
+
+.bot-container .wrapper{
+	max-width: 1920px;
+	
+	
+	
+	
+	position: relative;
+	height: auto;
+	bottom: px;
+	
+}
+.bot-header_toptext{
+	max-width: 1920px;
+	display: flex;
+	align-content: center;
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+	padding-left: 30px;
+font-size: 30px;
+}
+
+.bot-header_toptext p{
+	
+	padding-right: 230px;
+	padding-left: 55px;
+	padding-top: 40px;
+	 white-space: nowrap;
+	position: relative;
+	
+	
+}
+
+.bot-header_bottext{
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+	position: relative;
+white-space: nowrap;
+	right: 1830px;
+	top: 10px;
+	margin: auto;
+	max-width: 1920px;
+	
+}
+
+.bot-header-links li  .quicklink  {
+	position: relative;
+	bottom: 135px;
+	right: 10px;
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 22px;
+text-decoration: none;
+
+}
+
+
+.bot-header-links {
+	position: relative;
+	right: 1100px;
+	top: 10px;
+	list-style: none;
+}
+.bot-header-links li .inventory {
+	position: relative;
+	right: 475px;
+	top: 90px;
+
+	
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 22px;
+text-decoration: none;
+	
+}
+
+
+
+.sociallogo{
+position: relative;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	
+	right: 820px;
+	bottom: 50px;
+	
+}

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <!--Example of conditional statement-->
+        {% if title %}
+        <title>{{ title }} - Lemons and Limes</title>
+        {% else %}
+        <title>Find your next ride </title>
+        {% endif %}
+    </head>
+    {% extends "base.html" %}
+    {% block content %}
+    <body>
+        
+        <div>
+            <!--
+            <p> Search Results: </p>-->
+            <p> {{ message }} </p>
+
+        <ul>
+            {% for result in results %}
+            <li> {{ result }} </li>
+            {% endfor %}
+        </ul>
+        </div>
+        {% endblock %}
+    </body>
+</html>
