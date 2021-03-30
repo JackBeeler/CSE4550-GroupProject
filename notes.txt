@@ -1,9 +1,0 @@
-Search results should return "Cards"
-    https://getbootstrap.com/docs/4.0/components/card/
-
-
-------
-
-HTTP Methods within Flask
-    https://pythonise.com/series/learning-flask/flask-http-methods
-
