@@ -4,3 +4,4 @@ gunicorn==19.9.0
 gevent==1.5
 
 PyYAML==3.11
+werkzeug>=0.15.0
