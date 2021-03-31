@@ -5,4 +5,4 @@ gevent==1.5
 PyYAML==3.11
 mysqlclient==2.0.3
 werkzeug>=0.15.0
-setuptools>=54.2.0
+setuptools==54.2.0
