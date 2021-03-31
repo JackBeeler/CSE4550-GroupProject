@@ -4,5 +4,3 @@ gunicorn==19.9.0
 gevent==1.5
 
 PyYAML==3.11
-SQLAlchemy==1.0.9
-Werkzeug==0.10.4
