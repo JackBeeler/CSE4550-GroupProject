@@ -1,1 +1,1 @@
-web: gunicorn dealership:app
+web: gunicorn app:app
