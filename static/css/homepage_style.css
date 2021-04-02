@@ -1,11 +1,22 @@
-.nav-container .homebut {
-    outline: 0 !important;
+﻿.top-header .mx-auto{
+	position: absolute;
+	margin: auto;
+}
 
+.top-header{
 	position: relative;
-	left:100px;
-	padding-top: 80px;
+}
+
+.homebut{
+    outline: 0 !important;
+	position: relative;
+	top: 150px;
+	 left: 130px;
+	  color: transparent; background-color: transparent; border-color: transparent; cursor: default;
+	
+	padding-top: 60px;
 	padding-right: 40px;
-	color: transparent; background-color: transparent; border-color: transparent; cursor: default;
+	
 	border: none;
     outline: none;
 }
@@ -16,75 +27,57 @@ margin: auto;
     font-family: "Yantramanav", sans-serif;
 }
 
-.
 
-/*navigation*/
 
-.img-fluid{
-	display: block;
-	width: auto;
+
+.TopLemonsandLimesHeader {
+	
+ position: relative;
+	margin: auto;
+     height:  auto;  
+	max-width: 1920px;
 }
+
 .top-header{
-	 background-image: url('images/top_header.png');
-    background-repeat: no-repeat;
-    background-size: cover ;
+	 
 	  margin:  auto;
      height:     auto;  
 	max-width: 1920px;
 	
 }
+
+.wrapper1{
+	background: black;
+	position: inherit;
+	max-width: 1920px;
+	margin: auto;
+	
+	
+}
+
 .headerr{
 	
 	margin: auto;
 	max-width: 1920px;
 }
 
-.nav-container .wrapper {
-	
-    
-    margin:  auto;
-     height:     auto;
-	
-	
-}
 
-.nav-container {
-    background-image: url('images/button_header.png');
-    background-repeat: no-repeat;
-    background-size:cover ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-	
-	margin: auto;
-	height: auto;
-	max-width: 1920px;
-		
-	
-    
-}
+
+
+
+
 
 .nav2-container {
-	
-    background-image: url('images/dealer_image.png');
+	 background-image: url('images/dealer_image.png');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 855px;
+    
+    
+   height: 855px;
 	margin: auto;
-	position: relative;
 	max-width: 1920px;
 	
-    
-	
-	
 }
-
-
-
 
 .nav3-container{
 	max-width: 1920px;
@@ -98,11 +91,14 @@ margin: auto;
  
 
 .search-box {
-	
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	top: 120px;
+	
+	margin: auto;
+	top: 420px;
+	left: 30px;
 	
 
 	
@@ -129,7 +125,7 @@ margin: auto;
 }
 .search-box input{
 	padding: 15px;
-	
+	margin: auto;
 	padding-right: 50vw;
 	background-color: #313131;
 	
@@ -144,21 +140,12 @@ margin: auto;
 	
 }
 
-nav{
-	
-}
-
-nav ul{
-    display: flex;
-	align-content: cente;
-	
-	
-	
-}
 
 .top_nav_items{
-	
-	
+	 display: flex;
+	justify-content: space-around;
+	align-content: center;
+	margin: auto;
 	max-width: 1920px;
 	
 }
@@ -166,7 +153,8 @@ nav ul{
 
 .top_nav_items li {
     list-style: none;
-	padding-top: 165px;
+	margin: auto;
+	
 	
 
    
@@ -193,6 +181,9 @@ padding-right: 5vw;
 	margin: auto;
 }
 .car_nav_items {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
 	background:#161616;
 	margin: auto;
 	max-width: 3000px;
@@ -203,7 +194,7 @@ padding-right: 5vw;
 }
 .car_nav_items li a{
 	color: #FBFBFB;
-	white-space: nowrap
+	white-space: nowrap;
 font-family: Roboto, sans-serif;
 margin-right: 150px;
 font-size: 30px;
@@ -213,31 +204,32 @@ font-size: 30px;
 	
 
 .middle_nav_items{
+	display: flex;
+	position: relative;
+	top: 400px;
+    align-items: center;
+    justify-content: space-between;
+	margin: auto;
+	
 	
 	
 }
 
 
 .middle_nav_items li {
-	
+	position: relative;
 	list-style-type: none;
-	padding-left: 5vw;
+	padding-right: 5vw;
 	margin: auto;
-	
-	
-	 
-	
-	
-	
-	
-	
 	
 }
 
 .middle_nav_items li button {
+	position: relative;
 	color: #000000;
 font-family: Roboto, sans-serif;
 font-size: 29px;
+	margin: auto;
 background: #F2F2F2;
 padding-left: 50px;
 padding-right: 50px;
@@ -249,12 +241,7 @@ font-weight: fine;
 
 }
 
-.wrapper nav .middle_nav_items{
 
-	
-	position: absolute;
-	
-}
 
 .botimage  {
 	margin: auto;
@@ -267,6 +254,7 @@ font-weight: fine;
 .botimage img {
 	position: absolute;
 	margin: auto;
+	max-width: 1920px;
 	
 
 }
@@ -288,13 +276,8 @@ font-weight: fine;
 
 .bot-container .wrapper{
 	max-width: 1920px;
-	
-	
-	
-	
 	position: relative;
 	height: auto;
-	bottom: px;
 	
 }
 .bot-header_toptext{
@@ -303,14 +286,14 @@ font-weight: fine;
 	align-content: center;
 	color: #FBFBFB;
 font-family: Roboto, sans-serif;
-	padding-left: 30px;
 font-size: 30px;
+
 }
 
 .bot-header_toptext p{
 	
 	padding-right: 230px;
-	padding-left: 55px;
+	padding-left: 60px;
 	padding-top: 40px;
 	 white-space: nowrap;
 	position: relative;
