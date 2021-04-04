@@ -1,0 +1,394 @@
+﻿.profileimg1{
+	height: 230px;
+	
+}
+
+.profileimg2{
+	height: 230px;
+}
+
+.profileimg3{
+	height: 230px;
+}
+
+.row{
+display: flex;align-content: center;
+	justify-content: space-around;
+	
+}
+
+
+.top-header .mx-auto{
+	position: absolute;
+	margin: auto;
+}
+
+.top-header{
+	position: relative;
+}
+
+.homebut{
+    outline: 0 !important;
+	position: relative;
+	top: 90px;
+	 left: 50px;
+	  color: transparent; background-color: transparent; border-color: transparent; cursor: default;
+	
+	padding-top: 30px;
+	padding-right: 20px;
+	
+	border: none;
+    outline: none;
+}
+
+body{
+margin: auto;
+  hieght: auto;
+    font-family: "Yantramanav", sans-serif;
+}
+
+
+
+
+.TopLemonsandLimesHeader {
+	
+
+	margin: auto;
+     height:  auto;  
+	max-width: 1000px;
+}
+
+.top-header{
+	 
+	  margin:  auto;
+     height:     auto;  
+	max-width: 1000px;
+	
+}
+
+.wrapper1{
+	background-color: black;
+	position: inherit;
+	max-width: 1000px;
+	margin: auto;
+	
+	
+}
+
+.headerr{
+	
+	margin: auto;
+	max-width: 1000px;
+}
+
+
+
+
+
+.OurTeamHeading{
+	margin-top: 20px;
+	align-self: center;
+	background-color:whitesmoke;
+	border-radius: 30px;
+	margin: auto;
+}
+
+
+.column{
+	padding: 40px;
+}
+.nav2-container {
+	 background-image: url('images/dealer_image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+   height: auto;
+	margin: auto;
+	max-width: 1000px;
+	
+}
+
+.nav3-container{
+	max-width: 1000px;
+	margin: auto;
+	
+	
+}
+
+ 
+
+.search-box {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	position: relative;
+	
+	margin: auto;
+	top: 420px;
+	left: 30px;
+	
+
+	
+	
+	
+	
+
+	
+	
+}
+
+.search-box  button {
+  position: relative;
+	right: 40px;
+ border-radius: 50px;
+background-color:#9A9A9A;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+	
+}
+
+.search-box input button:hover {
+  background: #18961B;
+}
+.search-box input{
+	padding: 15px;
+	margin: auto;
+	padding-right: 500px;
+	
+	background-color: #313131;
+	
+	color: #FBFBFB;
+	border-radius: 25px;
+	border-width: thick;
+	font-weight: bolder;
+	font-family: Roboto, sans-serif;
+	
+	
+	
+	
+}
+
+
+.top_nav_items{
+	 display: flex;
+	justify-content: space-around;
+	align-content: center;
+	margin: auto;
+	max-width: 1000px;
+	
+}
+
+
+.top_nav_items li {
+    list-style: none;
+	margin: auto;}
+
+.top_nav_items li:nth-last-of-type(1) {
+}
+
+.top_nav_items li a{
+color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 17px;
+text-decoration: none;
+margin:auto;
+
+
+}
+.car_nav_items li{
+	margin: auto;
+}
+.car_nav_items {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	background:#161616;
+	margin: auto;
+	max-width: 1000px;
+	list-style: none;
+	border: 2px solid #F6EAEB;
+	
+
+}
+.car_nav_items li a{
+	color: #FBFBFB;
+	white-space: nowrap;
+font-family: Roboto, sans-serif;
+font-size: 17px;
+	
+
+}
+	
+
+.middle_nav_items{
+	display: flex;
+	position: relative;
+	top: 400px;
+    align-items: center;
+    justify-content: space-between;
+	margin: auto;
+	
+	
+	
+}
+
+
+.middle_nav_items li {
+	position: relative;
+	list-style-type: none;
+	padding-right: 20px;
+	margin: auto;
+	
+}
+
+.middle_nav_items li button {
+	position: relative;
+	color: #000000;
+font-family: Roboto, sans-serif;
+font-size: 17px;
+	margin: auto;
+background: #F2F2F2;
+padding-left: 35px;
+padding-right: 35px;
+outline-style: none;
+border-radius: 12px;
+font-weight: bold;
+	cursor: pointer;
+	
+
+}
+
+
+
+.botimage  {
+	margin: auto;
+	max-width: 1000px;
+	
+	
+	
+	
+}
+.botimage img {
+	position: absolute;
+	margin: auto;
+	max-width: 1000px;
+	
+
+}
+
+
+.bot-header{
+	//background-color: green;
+	position: relative;
+	max-width: 1000px;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	
+	
+}
+
+.bot-container {
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	
+	
+}
+
+
+
+.bot-header_toptext{
+	position: relative;
+	display: flex;
+	align-content:center;
+	list-style: none;
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 20px;
+	
+	
+}
+.bot-header_toptext li{
+	margin-left: 40px;
+}
+
+.bot-header_toptext li p{
+	padding-top: 10px;
+	padding-right: 75px;
+	position: relative;
+	 white-space: nowrap;
+	
+}
+
+
+
+.bot-header_bottext{
+	
+	position: relative;
+white-space: nowrap;
+	right: 990px;
+	margin: auto;
+	max-width: 1000px;
+	
+}
+.bot-header_bottext p{
+	position: relative;
+	top: 60px;
+color: #FBFBFB;
+font-family: Roboto, sans-serif;
+	font-size: 11px;
+	font-weight: bold
+}
+ .lastline{
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.bot-header-links li  .quicklink  {
+	position: relative;
+	bottom: 65px;
+	left: 230px;
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 15px;
+text-decoration: none;
+
+}
+
+
+.bot-header-links {
+	position: absolute;
+	left:350px;
+	list-style: none;
+}
+.bot-header-links li .inventory {
+	position: relative;
+	right: 2px;
+	top: 40px;
+
+	
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 12px;
+text-decoration: none;
+	
+}
+
+
+
+.sociallogo{
+position: relative;
+	display: flex;
+	align-content: center;
+	justify-content:flex-start;
+	height: 40px;
+	right: 480px;
+	top: 80px;
+	
+}.lastline {
+}
+.profileimg {
+}
