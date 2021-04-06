@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome to LemonsandLimes Auto</title>
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="homepage_style.css" />
     <link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+	<link href="homepage_styleLoggedIn.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!--
@@ -61,59 +61,45 @@
         <li> <a href="about">ABOUT US</a></li>
         <li> <a href="contact">CONTACT US</a></li>
         <li> <a href="#">FAVORITES</a></li>
-        <li> <a href="login">LOGIN</a></li>
-        <li> <a href="signup">SIGN UP</a></li>
+        <li> <a href="homepage">LOGOUT</a></li>
+        <li class="loggedInUser"> <a href="#">WELCOME USER</a></li>
       </ul>
     </nav>
 </div>
 <div class="nav2-container">
            
-  <div class="wrapper">
+        <div class="wrapper">
             <nav>
-              <div>&nbsp;</div>
-              <h2 class="OurTeamHeading col-xl-7 col-lg-7 col-md-7 col-sm-8" style="text-align:center">Our Team</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="images/JenniferJin.png" alt="ProfessorJin" class="profileimg1">
-      <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>jennifer.jin@csusb.edu
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
+                <ul class="middle_nav_items">
+
+                    <li>
+                        
+                        <button type="button" data-toggle="modal" data-target="#myModal">PRE-OWNED INVENTORY</button>
+                    </li>
+
+                    <li>
+                        
+                        <button type="button"  data-toggle="modal" data-target="#myModal">SPECIALS</button>
+                    </li>
+
+                    <li>
+                        
+                        <button type="button" data-toggle="modal" data-target="#myModal">SERVICE</button>
+                    </li>
+
+                    <li>
+                        
+                        <button type="button" data-toggle="modal" data-target="#myModal">ABOUT US</button>
+                    </li>
+                </ul>
+            </nav>
   </div>
 
-  <div class="column">
-    <div class="card">
-      <img src="images/ProfilePic1 copy.png" alt="Mike" class="profileimg2">
-      <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <img src="images/profiel.jpg" alt="John" class="profileimg3" style="width:100%">
-      <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-            </nav>
-</div>
+  <div class="search-box col-xl-9 col-lg-9 col-md-10">
+            <input type="text" placeholder="Search" name = "search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+</div> 
+           
 </div>
 <div class="nav3-container">
     <div class="wrapper">
