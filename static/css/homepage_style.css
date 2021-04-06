@@ -68,7 +68,7 @@ margin: auto;
 
 
 .nav2-container {
-	 background-image: url('images/dealer_image.png');
+	 background-image: url('static/css/images/dealer_image.png');
     background-repeat: no-repeat;
     background-size: cover;
     
