@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript">
+			function showMessage(){
+				alert("Check your email to complete the sign in process.");
+			}
+		</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -40,7 +45,7 @@
             <input type="password" placeholder="Enter Password" name="psw" required>
 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div class="clearfix">
-              <button type="submit" class="signupbtn">Sign Up</button>
+              <button type="submit" class="signupbtn" onClick= 'showMessage() >Sign Up</button>
             </div>
             &nbsp;</div>
         &nbsp;</div>
