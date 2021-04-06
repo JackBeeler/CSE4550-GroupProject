@@ -1,88 +1,10 @@
-﻿.large-vehicle-img{
-   margin: auto;
-	
-	
-	border-radius: 50px;
-}
-
-.col-{
-	
-	border-radius: 25px;
-    background: #000000;
-  padding: 20px;
-}
-
-.pull-left{
-	margin-left: 10px;
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: 400;
-    line-height: 1.42857143;
-  
-    white-space: nowrap;
-}
-
-
-
-.btn{
-	display: inline-block;
-    margin-bottom: 0;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-	background-color: grey;
-border-color: #e7e7e7;
-	color: white;
-font-family: Roboto, sans-serif;
-
-}
-
-.palette-bg2{
-	color: white;
-font-family: Roboto, sans-serif;
-font-size: 17px;
-}
-
-.clearfix{
-	color: white;
-font-family: Roboto, sans-serif;
-font-size: 17px;`
-}
-
-.listingContainer{
-	color: white;
-font-family: Roboto, sans-serif;
-font-size: 17px;
-	margin: auto;
-	position: relative;
-}
-
-.top-header .mx-auto{
+﻿.top-header .mx-auto{
 	position: absolute;
 	margin: auto;
 }
 
 .top-header{
 	position: relative;
-	margin: auto;
 }
 
 .homebut{
@@ -146,12 +68,12 @@ margin: auto;
 
 
 .nav2-container {
-	 background-image: url('https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&w=1000&q=80');
+	 background-image: url('images/dealer_image.png');
     background-repeat: no-repeat;
     background-size: cover;
     
-    width: auto;
-   height: 1200px;
+    
+   height: 855px;
 	margin: auto;
 	max-width: 1000px;
 	
@@ -159,7 +81,6 @@ margin: auto;
 
 .nav3-container{
 	max-width: 1000px;
-	width: auto;
 	margin: auto;
 	
 	

@@ -1,0 +1,237 @@
+.topimg{
+	
+	max-width: 1000px;
+	margin: auto;
+}
+
+.botimage  {
+	margin: auto;
+	max-width: 1000px;
+	
+	
+	
+	
+}
+.botimage img {
+	position: absolute;
+	margin: auto;
+	
+
+}
+
+.bot-header{
+	//background-color: green;
+	display: flex;
+	align-content: space-between;
+	
+	position: relative;
+}
+
+.bot-container {
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	
+}
+
+.bot-container .wrapper{
+	max-width: 1000px;
+	
+	
+	
+	
+	position: relative;
+	height: auto;
+	bottom: px;
+	
+}
+.bot-header_toptext{
+	max-width: 1000px;
+	display: flex;
+	align-content: center;
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+	padding-left: 30px;
+font-size: 30px;
+}
+
+.bot-header_toptext p{
+	
+	padding-right: 230px;
+	padding-left: 55px;
+	padding-top: 40px;
+	 white-space: nowrap;
+	position: relative;
+	
+	
+}
+
+.bot-header_bottext{
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+	position: relative;
+white-space: nowrap;
+	right: 1830px;
+	top: 10px;
+	margin: auto;
+	max-width: 1000px;
+	
+}
+
+.bot-header-links li  .quicklink  {
+	position: relative;
+	bottom: 135px;
+	right: 10px;
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 22px;
+text-decoration: none;
+
+}
+
+
+.bot-header-links {
+	position: relative;
+	right: 1100px;
+	top: 10px;
+	list-style: none;
+}
+.bot-header-links li .inventory {
+	position: relative;
+	right: 475px;
+	top: 90px;
+
+	
+	color: #FBFBFB;
+font-family: Roboto, sans-serif;
+font-size: 22px;
+text-decoration: none;
+	
+}
+
+
+
+.sociallogo{
+position: relative;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	
+	right: 820px;
+	bottom: 50px;
+	
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 50%;
+  display: block;
+  height: 40px;
+  margin: 8px 0;
+  position: relative;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 8px;
+}
+.button1 {border-radius: 8px;}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.mat-card{ position: relative }
+
+h1{ margin-right: 120px; }
+
+.buttons{
+  position: absolute;
+  top:50%;
+  right: 0;
+  width: 120px;
+  transform: translateY(-50%);
+}
+
+/* Center the image and position the close button */
+
+  
+.imgcontainer1 {
+    background: none;
+    color: #ffd030;
+    vertical-align: super;
+    font-size: 34px
+  }
+
+.imgcontainer2 {
+    background: none;
+    color: #69b247;
+    vertical-align: super;
+    font-size: 34px
+  }
+img.logo {
+  width: 5%;
+  border-radius: 25%;
+}
+odal Content/Box */
+
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  
+}
+
+.containerItems{
+	color: #FBFBFB;
+	border-radius: 25px;
+	border-width: thick;
+	
+	font-family: Roboto, sans-serif;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	left: 25%;
+	position: relative;
+}
+
+.container   {
+	background-image: url('images/dealer_image.png');
+    background-repeat: no-repeat;
+    background-size:cover ; 
+	
+	max-width: 1000px;
+	
+	margin: auto;
+	
+	justify-content:center;
+	
+} 
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,117 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.forgetpasslink{
+	margin-left: 50%;
+}
+
+.signin-container{
+	
+}
+
+
+.contBackground {
+    background-image: url(images/dealer_image.png);
+    background-size: cover;
+    height: auto;
+    max-width: 1000px;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 50%;
+  display: block;
+  height: 40px;
+  margin: 8px 0;
+  position: relative;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 8px;
+}
+.button1 {border-radius: 8px;}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.mat-card{ position: relative }
+
+h1{ margin-right: 120px; }
+
+.buttons{
+  position: absolute;
+  top:50%;
+  right: 0;
+  width: 120px;
+  transform: translateY(-50%);
+}
+
+/* Center the image and position the close button */
+
+.signin-container{
+	padding-left: 300px;
+}
+.imgcontainer1 {
+   
+    color: #ffd030;
+  
+    font-size: 34px
+  }
+
+.imgcontainer2 {
+    background: none;
+    color: #69b247;
+    vertical-align: super;
+    font-size: 34px
+  }
+img.logo {
+  width: 5%;
+  border-radius: 25%;
+}
+
+.container {
+  padding: 12px;
+}
+
+span.psw {
+  padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  position: absolute;
+  align-items: center;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,151 @@
+﻿
+.top-header{
+	 background-image: url('images/top_header.png');
+    background-repeat: no-repeat;
+    background-size: cover ;
+	  margin:  auto;
+     height:     auto;  
+	max-width: 1000px;
+	
+}
+.contactUsTitle {
+	border: 2px solid white;
+  border-radius: 25px;
+	padding: 5px;
+	display: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	background: grey;
+}
+
+.contactUsTitle strong{
+	font-family: Roboto, sans-serif;
+	color:#FFFFFF;
+	padding-left: 1px;
+	white-space: nowrap;
+	
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+.form-horizontal{
+	color: mintcream;
+font-family: Roboto, sans-serif;
+	position: relative;
+	width: auto;
+	margin-top: 150px;
+}
+
+.form-horizontal .form-group {
+	margin-top: auto;
+}
+ .btn-default{
+	background-color: #4CAF50;
+	 border-radius: 2px;
+	 color: black;
+  border: 12px solid #0000;
+}
+
+.form-horizontal .form-group .col-sm-10 {
+	margin-right: 500px;
+}
+
+ #inputPassword3{
+	padding-bottom: 150px;
+	padding-top: 20px;
+} 
+
+
+body{
+	
+  hieght: auto;
+    font-family: "Yantramanav", sans-serif;
+}
+
+.
+
+/*navigation*/
+
+
+
+	
+}
+
+
+
+.nav-container .wrapper {
+	
+    max-width: 1000px;
+    margin:  auto;
+     height:     auto;
+	
+	
+}
+
+
+.nav-container {
+    background-image: url('images/button_header.png');
+    background-repeat: no-repeat;
+    background-size:cover ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+	margin: auto;
+	max-width: 1000px;
+		
+	
+    
+}
+
+.nav2-container {
+	
+    background-image: url('images/dealer_image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 855px;
+	max-height: auto;
+	margin: auto;
+	position: relative;
+	max-width: 1000px;
+	
+    
+	
+	
+}
+
+
+
+
+
+
+ 
+
+
+
+nav{
+	margin: auto;
+	
+}
+
+nav ul{
+    display: flex;
+	align-content: center;
+	
+	
+	
+}
+
+
+.botimage img {
+	position: absolute;
+	margin: auto;
+	
+
+}
+
+
+

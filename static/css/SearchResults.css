@@ -1,11 +1,4 @@
-﻿.large-vehicle-img{
-   margin: auto;
-	
-	
-	border-radius: 50px;
-}
-
-.col-{
+﻿.col-{
 	
 	border-radius: 25px;
     background: #000000;
@@ -150,8 +143,8 @@ margin: auto;
     background-repeat: no-repeat;
     background-size: cover;
     
-    width: auto;
-   height: 1200px;
+    
+   height: 855px;
 	margin: auto;
 	max-width: 1000px;
 	
@@ -159,7 +152,6 @@ margin: auto;
 
 .nav3-container{
 	max-width: 1000px;
-	width: auto;
 	margin: auto;
 	
 	
