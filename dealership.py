@@ -20,17 +20,17 @@ def homepage():
 #sign up
 @app.route('/signup')
 def signup():
-    return render_template('signup.html')
+    return render_template('SignUp.html')
 
 #login
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    return render_template('logIn.html')
 
 #contact
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('Contact Us.html')
 
 #about
 @app.route('/about')
