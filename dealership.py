@@ -43,7 +43,7 @@ def signup():
             msg = "You have successfully registered!"
     elif request.method == 'POST':
         msg = 'Please fill the form!'
-    return render_template('signup.html', msg = msg)
+    return render_template('SignUp.html', msg = msg)
 
 #login
 @app.route('/login', methods=['GET','POST'])
