@@ -59,10 +59,10 @@ def login():
             session['loggedin'] = True
             session['id'] = customer_login2['id']
             session['email'] = customer_login2['email']
-            return redirect(url_for('homepagelogged'))
+            return redirect(url_for('homepageLoggedIn.html'))
         else:
             msg = 'Wrong email/password'
-    return render_template('login.html', msg=msg)
+    return render_template('LogIn.html', msg=msg)
 
 @app.route('/homepagelogged')
 def homepagelogged():
@@ -74,12 +74,12 @@ def logout():
     session.pop('loggedin', None)
     session.pop('id', None)
     session.pop('email', None)
-    return redirect(url_for('login'))
+    return redirect(url_for('LogIn'))
 
 #contact
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('Contact Us.html')
 
 #about
 @app.route('/about')
