@@ -38,17 +38,17 @@
 </div>
 
 <div class="container23">
-  <div>
-        <div class="containerItems"><span style="position: relative; font-size: 22px">Sign Up</span>
-            <p></p>
-            <input type="text" placeholder="Enter Email" name="email" required>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+    <div>
+        <form action="{{ url_for('signup') }}" method="post" autocomplete="off">
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <input type="password" name="password" placeholder="Password" id="password" required>
 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-            <div class="clearfix">
-              <button type="submit" class="signupbtn" onClick= 'showMessage()' >Sign Up</button>
-            </div>
-            &nbsp;</div>
-        &nbsp;</div>
+        <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Sign Up">
+                &nbsp;
+            </form>
+            &nbsp;
+    </div>      
 </div>
 <footer class="text-left text-lg-start fixed-bottom" id="footer-style">
   <div class="container p-4" id="footer-container">
