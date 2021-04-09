@@ -38,13 +38,15 @@
 </div>
 
 <div class="contBackground">
-  <div class="imgcontainer1">
-    <div class="signin-container"><span style="position: relative; font-size: 22px">Sign In</span>
-        <input type="text" placeholder="   Email or Username" name="uname" required>
-        <input type="password" placeholder="   Password" name="psw" required>
-        <button class="button button1" type="submit">Sign In</button>
+   <div class="imgcontainer1">
+        <span style="position: relative; font-size: 22px">Sign In</span>
+        <form action="{{ url_for('login') }}" method="post">
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Login">
+        </form>
     </div>
-</div>
   <div class="container" > <span class="psw"><a href="#" class="forgetpasslink"> Forgot password?</a></span></div>
   &nbsp;</div>
 <footer class="text-left text-lg-start fixed-bottom" id="footer-style">
