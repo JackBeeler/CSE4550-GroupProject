@@ -1,48 +1,27 @@
-﻿.contactUsTitle {
-    border: 2px solid white;
-    border-radius: 25px;
-    padding: 5px;
-    display: relative;
-    margin-left: 10px;
-    margin-right: 10px;
-    background: grey;
-}
-.contactUsTitle strong{
-	font-family: Roboto, sans-serif;
-	color:#FFFFFF;
-	padding-left: 1px;
-	white-space: nowrap;
-	
-	font-weight: bolder;
-	font-size: 25px;
+﻿.text-uppercase3{
+	padding-bottom: 18px;
 }
 
-.form-horizontal{
-	color: mintcream;
-font-family: Roboto, sans-serif;
+.text-uppercase1{
+	 white-space: nowrap;
+	padding-bottom: 30px;
+	padding-left: 50px;
+}
+#footer-style{
 	position: relative;
-	
-	margin-top: 150px;
+	background-image:  url('https://hookagency.com/wp-content/uploads/2015/11/black-chrome-gradient-ui-gradient-background.jpg');
+	margin: auto;
+	width: 100%;
 }
 
-.form-horizontal .form-group {
-	margin-top: auto;
-}
- .btn-default{
-	background-color: #4CAF50;
-	 border-radius: 2px;
-	 color: black;
-  border: 12px solid #0000;
+.sociallogo{
+position: relative;
+	display: flex;
+	align-content: center;
+	justify-content:flex-start;
+	margin: auto;
 }
 
-.form-horizontal .form-group .col-sm-10 {
-	margin-right: 500px;
-}
-
- #inputPassword3{
-	padding-bottom: 150px;
-	padding-top: 20px;
-} 
 .top-header .mx-auto{
 	position: absolute;
 	margin: auto;
@@ -117,7 +96,7 @@ margin: auto;
     background-repeat: no-repeat;
     background-size: cover;
     
-    width: auto;
+    
    height: 855px;
 	margin: auto;
 	max-width: 1000px;
@@ -126,6 +105,8 @@ margin: auto;
 
 .nav3-container{
 	max-width: 1000px;
+	display: flex;
+	align-self: baseline;
 	margin: auto;
 	
 	
@@ -392,14 +373,13 @@ text-decoration: none;
 	
 }
 
-
-
-.sociallogo{
-position: relative;
-	display: flex;
-	align-content: center;
-	justify-content:flex-start;
-	height: 40px;
+.sociallogo input{
+	height: 30px;
+	display: inline;
+	align-content: flex-end;
+	justify-content: space-around;
+	margin: auto;
+}
 	
-}.lastline {
+.lastline {
 }
