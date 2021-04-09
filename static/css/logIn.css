@@ -1,12 +1,51 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;margin: auto;
+  hieght: auto;
+    font-family: "Yantramanav", sans-serif;}
+
+
+
+.text-uppercase3{
+	padding-bottom: 18px;
+}
+
+.text-uppercase1{
+	 white-space: nowrap;
+	padding-bottom: 30px;
+	padding-right: px;
+}
+#footer-style{
+	position: relative;
+	background-image:  url('https://hookagency.com/wp-content/uploads/2015/11/black-chrome-gradient-ui-gradient-background.jpg');
+	margin: auto;
+	width: 100%;
+	max-width: 1000px;
+}
+.sociallogo input{
+	height: 30px;
+	display: inline;
+	align-content: flex-end;
+	justify-content: space-around;
+	margin: auto;
+
+}
+
+#footer-text{
+	color: #F2F2F2;;
+}
+#quick-links-title2 {
+	color: #F2F2F2;
+padding-left: 50px;
+}
+
+#quick-links-title{
+	white-space: nowrap
+}
 
 .forgetpasslink{
 	margin-left: 50%;
 }
 
-.signin-container{
-	
-}
+
 
 
 .contBackground {
@@ -65,11 +104,14 @@ h1{ margin-right: 120px; }
 .signin-container{
 	padding-left: 300px;
 }
+
+
+
 .imgcontainer1 {
    
     color: #ffd030;
   
-    font-size: 34px
+    font-size: 15px
   }
 
 .imgcontainer2 {

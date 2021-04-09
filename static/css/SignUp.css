@@ -1,3 +1,15 @@
+#footer-text{
+	color: #F2F2F2;;
+}
+
+#quick-links-title2 {
+	color: #F2F2F2;
+padding-left: 50px;
+}
+#quick-links-title{
+	white-space: nowrap
+}
+
 .topimg{
 	
 	max-width: 1000px;
@@ -117,9 +129,6 @@ position: relative;
 	align-content: center;
 	justify-content: space-around;
 	
-	right: 820px;
-	bottom: 50px;
-	
 }
 
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -207,8 +216,8 @@ odal Content/Box */
 	position: relative;
 }
 
-.container   {
-	background-image: url('../static/css/images/dealer_image.png');
+.container23   {
+	background-image: url('images/dealer_image.png');
     background-repeat: no-repeat;
     background-size:cover ; 
 	

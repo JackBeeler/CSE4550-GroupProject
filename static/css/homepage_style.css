@@ -1,4 +1,49 @@
-﻿.top-header .mx-auto{
+﻿.contactUsTitle {
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 5px;
+    display: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: grey;
+}
+.contactUsTitle strong{
+	font-family: Roboto, sans-serif;
+	color:#FFFFFF;
+	padding-left: 1px;
+	white-space: nowrap;
+	
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+.form-horizontal{
+	color: mintcream;
+font-family: Roboto, sans-serif;
+	position: relative;
+	
+	margin-top: 150px;
+}
+
+.form-horizontal .form-group {
+	margin-top: auto;
+}
+ .btn-default{
+	background-color: #4CAF50;
+	 border-radius: 2px;
+	 color: black;
+  border: 12px solid #0000;
+}
+
+.form-horizontal .form-group .col-sm-10 {
+	margin-right: 500px;
+}
+
+ #inputPassword3{
+	padding-bottom: 150px;
+	padding-top: 20px;
+} 
+.top-header .mx-auto{
 	position: absolute;
 	margin: auto;
 }
@@ -68,11 +113,11 @@ margin: auto;
 
 
 .nav2-container {
-	 background-image: url('static/css/images/dealer_image.png');
+	 background-image: url('images/dealer_image.png');
     background-repeat: no-repeat;
     background-size: cover;
     
-    
+    width: auto;
    height: 855px;
 	margin: auto;
 	max-width: 1000px;
@@ -355,8 +400,6 @@ position: relative;
 	align-content: center;
 	justify-content:flex-start;
 	height: 40px;
-	right: 480px;
-	top: 80px;
 	
 }.lastline {
 }
