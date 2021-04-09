@@ -79,7 +79,7 @@ def logout():
 #contact
 @app.route('/contact')
 def contact():
-    return render_template('Contact Us.html')
+    return render_template('homepageLoggedIn.html.html')
 
 #about
 @app.route('/about')
