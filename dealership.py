@@ -88,7 +88,7 @@ def about():
 
 @app.route('/facebook')
 def about():
-    return redirect(url_for('https://www.classtools.net/FB/1856-DSRJjn'))
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
