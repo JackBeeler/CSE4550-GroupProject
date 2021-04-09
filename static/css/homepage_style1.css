@@ -1,25 +1,37 @@
+#footer-text{
+	color: #F2F2F2;;
+}
+
+#quick-links-title2 {
+	color: #F2F2F2;
+	padding-left: 50px;
+}
+
+
 .text-uppercase3{
-	padding-bottom: 18px;
+	padding-bottom: 8px;
+	padding-left: 10px;
 }
 
 .text-uppercase1{
 	 white-space: nowrap;
 	padding-bottom: 30px;
-	padding-left: 50px;
+	padding-right: px;
 }
 #footer-style{
 	position: relative;
 	background-image:  url('https://hookagency.com/wp-content/uploads/2015/11/black-chrome-gradient-ui-gradient-background.jpg');
 	margin: auto;
 	width: 100%;
+	max-width: 1000px;
 }
-
-.sociallogo{
-position: relative;
-	display: flex;
-	align-content: center;
-	justify-content:flex-start;
+.sociallogo input{
+	height: 30px;
+	display: inline;
+	align-content: flex-end;
+	justify-content: space-around;
 	margin: auto;
+
 }
 
 .top-header .mx-auto{
@@ -105,8 +117,6 @@ margin: auto;
 
 .nav3-container{
 	max-width: 1000px;
-	display: flex;
-	align-self: baseline;
 	margin: auto;
 	
 	
@@ -373,13 +383,14 @@ text-decoration: none;
 	
 }
 
-.sociallogo input{
-	height: 30px;
-	display: inline;
-	align-content: flex-end;
-	justify-content: space-around;
-	margin: auto;
-}
+
+
+.sociallogo{
+position: relative;
+	display: flex;
+	align-content: center;
+	justify-content:flex-start;
+	height: 40px;
 	
-.lastline {
+}.lastline {
 }
