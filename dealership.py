@@ -64,7 +64,7 @@ def login():
             msg = 'Wrong email/password'
     return render_template('LogIn.html', msg=msg)
 
-@app.route('/homepagelogged')
+@app.route('/homepageloggedIn')
 def homepagelogged():
     return render_template('homepageLoggedIn.html')
 
