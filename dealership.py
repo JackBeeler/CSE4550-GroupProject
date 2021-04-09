@@ -89,7 +89,7 @@ def about():
 #Facebook icon link
 @app.route('/facebook')
 def about():
-    return https://www.classtools.net/FB/1856-DSRJjn
+    return render_template(https://www.classtools.net/FB/1856-DSRJjn)
 
 
 if __name__ == '__main__':
