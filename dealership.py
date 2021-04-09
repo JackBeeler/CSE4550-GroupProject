@@ -59,7 +59,7 @@ def login():
             session['loggedin'] = True
             session['id'] = customer_login['id']
             session['email'] = customer_login['email']
-            return redirect(url_for('homepageLoggedIn.html'))
+            return render_template('homepageLoggedIn.html')
         else:
             msg = 'Wrong email/password'
     return render_template('LogIn.html', msg=msg)
