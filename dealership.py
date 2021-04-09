@@ -30,8 +30,8 @@ def signup():
         password = request.form['password']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM customer_login WHERE email = %s', (email,))
-        customer_login2 = cursor.fetchone()
-        if customer_login2:
+        customer_login = cursor.fetchone()
+        if customer_login:
             msg = 'Account already exists!'
         elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
             msg = 'Invalid email address!'
