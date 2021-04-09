@@ -86,6 +86,11 @@ def contact():
 def about():
     return render_template('about.html')
 
+#Facebook icon link
+@app.route('/facebook')
+def about():
+    return https://www.classtools.net/FB/1856-DSRJjn
+
 
 if __name__ == '__main__':
     app.run(debug=True)
