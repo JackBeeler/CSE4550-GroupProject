@@ -4,9 +4,11 @@
 
 #quick-links-title2 {
 	color: #F2F2F2;
-	padding-left: 50px;
+padding-left: 50px;
 }
-
+#quick-links-title{
+	white-space: nowrap
+}
 
 .text-uppercase3{
 	padding-bottom: 8px;
