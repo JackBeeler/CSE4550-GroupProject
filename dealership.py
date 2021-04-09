@@ -59,7 +59,8 @@ def login():
             session['loggedin'] = True
             session['id'] = customer_login['id']
             session['email'] = customer_login['email']
-            return render_template('homepageLoggedIn.html')
+            msg = 'Success'
+            return render_template('homepageLoggedIn.html', msg = msg)
         else:
             msg = 'Wrong email/password'
     return render_template('LogIn.html', msg=msg)
