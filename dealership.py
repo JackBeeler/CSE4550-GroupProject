@@ -29,7 +29,7 @@ def signup():
         email = request.form['email']
         password = request.form['password']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM customer_login2 WHERE email = %s', (email,))
+        cursor.execute('SELECT * FROM customer_login WHERE email = %s', (email,))
         customer_login2 = cursor.fetchone()
         if customer_login2:
             msg = 'Account already exists!'
@@ -38,7 +38,7 @@ def signup():
         elif not email or not password:
             msg = 'Please fill out the form!'
         else:
-            cursor.execute('INSERT INTO customer_login2 VALUES (NULL, %s, %s)', (password, email))
+            cursor.execute('INSERT INTO customer_login VALUES (NULL, %s, %s)', (password, email))
             mysql.connection.commit()
             msg = "You have successfully registered!"
     elif request.method == 'POST':
@@ -53,12 +53,12 @@ def login():
         email = request.form['email']
         password = request.form['password']
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cur.execute('SELECT * FROM customer_login2 WHERE email = %s AND password = %s', (email, password,))
-        customer_login2 = cur.fetchone()
-        if customer_login2:
+        cur.execute('SELECT * FROM customer_login WHERE email = %s AND password = %s', (email, password,))
+        customer_login = cur.fetchone()
+        if customer_login:
             session['loggedin'] = True
-            session['id'] = customer_login2['id']
-            session['email'] = customer_login2['email']
+            session['id'] = customer_login['id']
+            session['email'] = customer_login['email']
             return redirect(url_for('homepageLoggedIn.html'))
         else:
             msg = 'Wrong email/password'
