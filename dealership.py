@@ -22,13 +22,6 @@ mysql = MySQL(app)
 def homepage():
     return render_template('homepage.html')
 
-#Homepage
-#main route
-@app.route('/homepage')
-def home():
-    return render_template('homepage.html')
-
-
 #sign up
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
