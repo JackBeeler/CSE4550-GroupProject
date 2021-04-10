@@ -25,7 +25,7 @@ def homepage():
 #Homepage
 #main route
 @app.route('/homepage')
-def homepage():
+def home():
     return render_template('homepage.html')
 
 
