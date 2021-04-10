@@ -93,6 +93,10 @@ def about():
 def searchresults():
     return render_template('SearchResults.html')
 
+@app.route('/vehiclelisting')
+def searchresults():
+    return render_template('VehicleListing.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
