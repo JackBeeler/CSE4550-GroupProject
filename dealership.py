@@ -19,6 +19,11 @@ mysql = MySQL(app)
 #main route
 @app.route('/')
 def homepage():
+     if 'loggedin' in session:
+        # User is loggedin show them the home page
+        return render_template('homepageLoggedIn.html', username=session['username'])
+    # User is not loggedin redirect to login page
+    return redirect(url_for('login'))    
     return render_template('homepage.html')
 
 #sign up
@@ -53,14 +58,14 @@ def login():
         email = request.form['email']
         password = request.form['password']
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cur.execute('SELECT * FROM customer_login WHERE email = % s AND password = % s', (email, password,))
+        cur.execute('SELECT * FROM customer_login WHERE email = %s AND password = %s', (email, password,))
         customer_login = cur.fetchone()
         if customer_login:
             session['loggedin'] = True
-            session['id'] = customer_login['customer_id']
+            session['id'] = customer_login['id']
             session['email'] = customer_login['email']
             msg = 'Success'
-            return render_template('homepageLoggedIn.html', msg = msg)
+            return redirect(url_for('homepageLoggedIn'))
         else:
             msg = 'Wrong email/password'
     return render_template('LogIn.html', msg=msg)
