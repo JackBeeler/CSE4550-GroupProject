@@ -94,7 +94,7 @@ def searchresults():
     return render_template('SearchResults.html')
 
 @app.route('/vehiclelisting')
-def searchresults():
+def vehiclelisting():
     return render_template('VehicleListing.html')
 
 
