@@ -21,7 +21,7 @@ mysql = MySQL(app)
 def homepage():
      if 'loggedin' in session:
         # User is loggedin show them the home page
-        return render_template('homepageLoggedIn.html', username=session['username'])
+        return render_template('homepageLoggedIn.html', email=session['email'])
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))    
     return render_template('homepage.html')
