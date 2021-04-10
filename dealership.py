@@ -19,11 +19,6 @@ mysql = MySQL(app)
 #main route
 @app.route('/')
 def homepage():
-     if 'loggedin' in session:
-        # User is loggedin show them the home page
-        return render_template('homepageLoggedIn.html', email=session['email'])
-    # User is not loggedin redirect to login page
-    return redirect(url_for('login'))    
     return render_template('homepage.html')
 
 #sign up
@@ -65,7 +60,7 @@ def login():
             session['id'] = customer_login['id']
             session['email'] = customer_login['email']
             msg = 'Success'
-            return redirect(url_for('homepageLoggedIn'))
+            return render_template('homepageLoggedIn.html', msg = msg)
         else:
             msg = 'Wrong email/password'
     return render_template('LogIn.html', msg=msg)
