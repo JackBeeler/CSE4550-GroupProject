@@ -58,7 +58,7 @@ def login():
         customer_login = cur.fetchone()
         if customer_login:
             session['loggedin'] = True
-            session['id'] = customer_login['custumer_id']
+            session['id'] = customer_login['customer_id']
             session['email'] = customer_login['email']
             msg = 'Success'
             return render_template('homepageLoggedIn.html', msg = msg)
