@@ -88,5 +88,10 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/searchresults')
+def searchresults():
+    return render_template('SearchResults.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
