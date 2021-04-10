@@ -16,10 +16,18 @@ app.config['MYSQL_PASSWORD'] = db['mysql_password']
 app.config['MYSQL_DB'] = db['mysql_db']
 mysql = MySQL(app)
 
+
+#main route
+@app.route('/')
+def homepage():
+    return render_template('homepage.html')
+
+#Homepage
 #main route
 @app.route('/homepage')
 def homepage():
     return render_template('homepage.html')
+
 
 #sign up
 @app.route('/signup', methods=['GET', 'POST'])
