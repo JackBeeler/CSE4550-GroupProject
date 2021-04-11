@@ -82,6 +82,15 @@ padding-left: 50px;
     margin: auto;
 }
 
+input[type=text], input[type=email] {
+  display: block;
+  height: 40px;
+  margin: 8px 0;
+  position: relative;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
