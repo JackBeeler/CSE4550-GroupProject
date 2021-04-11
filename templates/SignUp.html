@@ -6,48 +6,7 @@
 				alert("Check your email to complete the sign in process.");
 			}
 	  
-	  var onloadCallback = function() {
-  grecaptcha.render('recaptcha', {
-        'sitekey' : '6LekpaUaAAAAAIN-XF97rMa18muxHyThz3O0MVOn'
-  });
-};
-
-$(function() {
-  $('#contact-form').on('submit', function(e) {
-    e.preventDefault();
-    var form = $(this);
-
-    form.find('.alert-danger').hide();
-
-    var payload = form.serialize();
-
-    function showError() {
-      form.find('.alert-danger').fadeIn();
-    }
-
-    if (grecaptcha.getResponse() == "") {
-      showError();
-      return false;
-    }
-
-    var xhr = $.ajax({
-      type: 'POST',
-      url: form.attr('action'),
-      data: payload,
-      dataType: 'json'
-    });
-
-    xhr.done(function(d) {
-      form.find('.alert-success').fadeIn();
-    });
-
-    xhr.fail(function(d) {
-      showError();
-    });
-  });
-});
-	  
-	  
+	 
 	  
 		</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,12 +51,6 @@ $(function() {
 		<a href="#" class "terms" style="color:red; margin-left: 30%">By creating an account you agree to our Terms & Privacy.
 		</a>
         <div class="msg">{{ msg }}</div>
-		<div>
-			{% block "page-scripts" %}
-  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&hl={{locale}}" async defer></script>
-  {{ "contact.js" | javascript_tag }}
-{% endblock %}
-		</div>
             <input type="submit" class="inputbutton" value="Sign Up">
                 &nbsp;
             </form>
