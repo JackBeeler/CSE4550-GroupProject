@@ -8,6 +8,13 @@
 	  
 	  
 		</script>
+	script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : 'your_site_key'
+        });
+      };
+    </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../static/css/SignUp.css" rel="stylesheet" type="text/css">
 <link href="../static/css/homepage_styleSign Up.css" rel="stylesheet" type="text/css">
@@ -47,9 +54,15 @@
 		<a href="#" class "terms" style="color:red; margin-left: 30%">By creating an account you agree to our Terms & Privacy.
 		</a>
         <div class="msg">{{ msg }}</div>
+		<form action="?" method="POST">
+      <div id="html_element"></div>
+      <br>
 		<input type="submit" class="inputbutton" value="Sign Up">
             &nbsp;
 		</form>
+		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
     </div>      
 </div>
 <footer class="text-left text-lg-start fixed-bottom" id="footer-style">
