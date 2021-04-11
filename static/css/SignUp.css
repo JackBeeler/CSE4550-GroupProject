@@ -1,17 +1,16 @@
 #email{
-	margin-left: 30%;
-	padding-right: 160px;
+	margin-left: 40%;
 	border-radius: 10px;
 }
 
 #password{
-	margin-left: 30%;
+	margin-left: 40%;
 	height: 30px;
 	padding-right: px;
 	border-radius: 10px;
 }
 .inputbutton{
-	margin-left: 30%;
+	margin-left: 40%;
 	background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -158,9 +157,18 @@ position: relative;
 
 body {font-family: Arial, Helvetica, sans-serif;}
 
+input[type=text], input[type=email] {
+  display: block;
+  height: 30px;
+  margin: 8px 0;
+  position: relative;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 50%;
   display: block;
   height: 40px;
   margin: 8px 0;
