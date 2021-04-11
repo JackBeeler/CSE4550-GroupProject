@@ -6,9 +6,16 @@
 				alert("Check your email to complete the sign in process.");
 			}
 	  
-	  
-	
     </script>
+	
+	<script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          '6LekpaUaAAAAAIN-XF97rMa18muxHyThz3O0MVOn' : 'your_site_key'
+        });
+      };
+    </script>
+	
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../static/css/SignUp.css" rel="stylesheet" type="text/css">
 <link href="../static/css/homepage_styleSign Up.css" rel="stylesheet" type="text/css">
