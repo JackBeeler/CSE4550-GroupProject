@@ -84,7 +84,6 @@ padding-left: 50px;
 }
 
 input[type=text], input[type=email] {
-  display: block;
   height: 30px;
   margin: 8px 0;
   position: relative;
