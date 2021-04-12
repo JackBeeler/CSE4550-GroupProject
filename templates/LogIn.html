@@ -14,6 +14,13 @@
 </style>
 <link href="logIn.css" rel="stylesheet" type="text/css">
 <link href="static/css/homepage_styleLogIn.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LekpaUaAAAAAIN-XF97rMa18muxHyThz3O0MVOn'
+        });
+      };
+    </script>
 </head>
 <body>
 <div class="top-header">
@@ -41,13 +48,16 @@
 
 <div class="contBackground">
    <div class="imgcontainer1">
-        <span style="position: relative; font-size: 22px; margin-left: 40%;">Sign In</span>
-        <form action="{{ url_for('login') }}" method="post">
-            <input type="email" name="email" placeholder="Email" id="email" required>
-            <input type="password" name="password" placeholder="Password" id="password" required>
-            <div class="msg">{{ msg }}</div>
-            <input type="submit" class="inputbutton" value="Login">
-        </form>
+        <form action="?" method="POST">
+      <div id="html_element" class = "CaptchaBox" style= "margin-left: 30%;"></div>
+      <br>
+		<input type="submit" class="inputbutton" onClick= 'showMessage()' value="Sign In">
+            &nbsp;
+		</form>
+		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+    </div>      
     </div>
   <div class="container" > <span class="psw"><a href="#" class="forgetpasslink"> Forgot password?</a></span></div>
   &nbsp;</div>
