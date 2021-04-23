@@ -20,7 +20,10 @@ mysql = MySQL(app)
 #main route
 @app.route('/')
 def homepage():
-    return render_template('homepage.html')
+    if  session['loggedin'] = True:
+         return render_template('homepageLoggedIn.html')
+    else:
+         return render_template('homepage.html')
 
 #sign up
 @app.route('/signup', methods=['GET', 'POST'])
@@ -45,26 +48,6 @@ def signup():
     elif request.method == 'POST':
         msg = 'Please fill the form!'
     return render_template('SignUp.html', msg = msg)
-
-
-#@app.route('/employeelogin', methods=['GET', 'POST'])
-def employeelogin():
-    msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-        username = request.form['username']
-        password = request.form['password']
-        cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cur1.execute('SELECT * FROM employee_login WHERE username = %s and password = %s', (username, password,))
-        employeelogin = cur1.fetchone()
-        if employeelogin:
-            session['loggedin'] = True
-            session['employee_id'] = employeelogin['employee_id']
-            session['username'] = employeelogin['username']
-            return redirect(url_for('homepagelogged'))
-        else: 
-            msg = "Wrong username/password"
-    return render_template('login.html', msg=msg)
-
 
 
 #login
