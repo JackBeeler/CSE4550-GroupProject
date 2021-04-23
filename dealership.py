@@ -20,7 +20,7 @@ mysql = MySQL(app)
 #main route
 @app.route('/')
 def homepage():
-    if  session['loggedin'] = True:
+    if  session['loggedin'] == True:
          return render_template('homepageLoggedIn.html')
     else:
          return render_template('homepage.html')
