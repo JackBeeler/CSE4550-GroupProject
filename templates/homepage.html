@@ -73,8 +73,11 @@
         
 
   <div class="search-box col-xl-9 col-lg-9 col-md-10">
-            <input type="text" placeholder="Search" name = "search" />
+	  <form action="{{ url_for('homepage') }}" method="post">
+            <input type="text" placeholder="Search Our Inventory" name = "search" id = search />
             <button type="submit"><i class="fa fa-search"></i></button>
+	  <div class="msg">{{ msg }}</div>
+	  </form> 
 </div> 
            
 </div>
