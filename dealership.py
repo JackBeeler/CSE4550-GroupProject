@@ -22,7 +22,7 @@ mysql = MySQL(app)
 def homepage():
     if  'username' in session:
         username = session['username']
-         return render_template('homepageLoggedIn.html')
+        return render_template('homepageLoggedIn.html')
     else:
          return render_template('homepage.html')
 
