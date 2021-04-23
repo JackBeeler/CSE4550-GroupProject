@@ -20,11 +20,11 @@ mysql = MySQL(app)
 #main route
 @app.route('/')
 def homepage():
-    if  'username' in session:
+    if 'username' in session:
         username = session['username']
         return render_template('homepageLoggedIn.html')
     else:
-         return render_template('homepage.html')
+        return render_template('homepage.html')
 
 #sign up
 @app.route('/signup', methods=['GET', 'POST'])
