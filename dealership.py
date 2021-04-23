@@ -62,14 +62,14 @@ def login():
             session['username'] = customer_login['username']
             msg = 'Success'
             return render_template('homepageLoggedIn.html', msg = msg)
-        else:
-            msg = 'Wrong username/password'
-    return render_template('LogIn.html', msg=msg)
+       // else:
+            //msg = 'Wrong username/password'
+    //return render_template('LogIn.html', msg=msg)
 
 
-@app.route('/employeelogin', methods=['GET', 'POST'])
-def employeelogin():
-    msg = ''
+//@app.route('/employeelogin', methods=['GET', 'POST'])
+//def employeelogin():
+    //msg = ''
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         username = request.form['username']
         password = request.form['password']
