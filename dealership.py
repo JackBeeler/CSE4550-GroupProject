@@ -134,12 +134,12 @@ def vehiclelisting():
      else:
         return render_template('VehicleListing.html',homepageusername = username6)
 
-@app.route('/favorites')
-def vehiclelisting():
-     if 'username' in session:  
-        username6 = session['username'] 
-     else:
-        return render_template('favorites.html',homepageusername = username6)
+#@app.route('/favorites')
+#def vehiclelisting():
+     #if 'username' in session:  
+        #username6 = session['username'] 
+     #else:
+        #return render_template('favorites.html',homepageusername = username6)
 
 
 if __name__ == '__main__':
