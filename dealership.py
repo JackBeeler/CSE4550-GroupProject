@@ -120,7 +120,7 @@ def about():
         username4 = session['username'] 
      
     
-    return render_template('about.html', homepageusername = username4)
+   return render_template('about.html', homepageusername = username4)
 
 
 @app.route('/searchresults')
@@ -129,7 +129,7 @@ def searchresults():
         username5 = session['username'] 
      
     
-     return render_template('SearchResults.html',homepageusername = username5)
+   return render_template('SearchResults.html',homepageusername = username5)
 
 @app.route('/vehiclelisting')
 def vehiclelisting():
@@ -137,7 +137,7 @@ def vehiclelisting():
         username6 = session['username'] 
      
     
-    return render_template('VehicleListing.html',homepageusername = username6)
+   return render_template('VehicleListing.html',homepageusername = username6)
 
 #@app.route('/favorites')
 #def vehiclelisting():
