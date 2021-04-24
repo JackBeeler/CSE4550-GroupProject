@@ -21,7 +21,6 @@ mysql = MySQL(app)
 @app.route('/')
 def homepage():
     if 'username' in session:
-        username = session['username']
         return render_template('homepageLoggedIn.html')
     else:
         return render_template('homepage.html')
@@ -86,10 +85,8 @@ def login():
 
 @app.route('/homepageloggedIn')
 def homepagelogged():
-        if request.method == 'GET' and 'homepageusername' in request.form:
-            request.form['homepageusername'] = session['username']
-     
-    return render_template('homepageLoggedIn.html')
+       
+     return render_template('homepageLoggedIn.html')
 
 
 @app.route('/logout')
