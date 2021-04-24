@@ -88,8 +88,7 @@ def login():
 def homepagelogged():
      if request.method == 'GET' and 'homepageusername' in request.form:
          request.form['homepageusername'] = session['username']
-        
-           
+     
     return render_template('homepageLoggedIn.html')
 
 
