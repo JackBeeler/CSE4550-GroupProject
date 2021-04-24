@@ -118,34 +118,41 @@ def contact():
 def about():
     if 'username' in session:  
         username4 = session['username']
+        return render_template('about.html', homepageusername = username4)
+    else:
+        return render_template('about.html')
         
-        
-        
-    
-    return render_template('about.html', homepageusername = username4)
 
 
 @app.route('/searchresults')
 def searchresults():
     if 'username' in session:  
-        username5 = session['username'] 
+        username5 = session['username']
+        return render_template('SearchResults.html',homepageusername = username5)
+    else:
+        return render_template('SearchResults.html')
      
-    return render_template('SearchResults.html',homepageusername = username5)
+    
 
 @app.route('/vehiclelisting')
 def vehiclelisting():
     if 'username' in session:  
         username6 = session['username'] 
+        return render_template('VehicleListing.html',homepageusername = username6)
+    else:
+        return render_template('VehicleListing.html')
             
      
-    return render_template('VehicleListing.html',homepageusername = username6)
+    
 
-#@app.route('/favorites')
-#def vehiclelisting():
-     #if 'username' in session:  
-        #username6 = session['username'] 
-     #else:
-        #return render_template('favorites.html',homepageusername = username6)
+@app.route('/favorites')
+def favorites():
+     if 'username' in session:  
+        username6 = session['username'] 
+        return render_template('favorites.html',homepageusername = username6)
+    else:
+        return render_template('favorites.html')
+     
 
 
 if __name__ == '__main__':
