@@ -33,6 +33,7 @@ def signup():
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
         username = request.form['username']
         password = request.form['password']
+        email = request.form['email']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM customer_login WHERE email = %s', (email,))
         customer_login = cursor.fetchone()
@@ -43,7 +44,8 @@ def signup():
         elif not email or not password:
             msg = 'Please fill out the form!'
         else:
-            cursor.execute('INSERT INTO customer_login VALUES (NULL, %s, %s, %s)', (email, password, email))
+            cursor.execute('INSERT INTO customer_login VALUES (NULL, %s, %s, %s)', (email, password, username))
+            cursor.execute('INSERT INTO customer (customer_photo) VALUES (default)')
             mysql.connection.commit()
             msg = "You have successfully registered!"
     elif request.method == 'POST':
@@ -68,6 +70,7 @@ def login():
             msg = 'Success'
             return render_template('homepageLoggedIn.html', msg = msg)
         else:
+            # Check if the person is an employee trying to log in
            # msg = 'Wrong username/password'
            cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur1.execute('SELECT * FROM employee_login WHERE username = %s and password = %s', (username, password,))
@@ -111,16 +114,22 @@ def contact():
 #about
 @app.route('/about')
 def about():
-    return render_template('about.html')
+     if 'username' in session:  
+        username4 = session['username']  
+    return render_template('about.html', homepageusername = username4)
 
 
 @app.route('/searchresults')
 def searchresults():
-    return render_template('SearchResults.html')
+     if 'username' in session:  
+        username5 = session['username'] 
+    return render_template('SearchResults.html',homepageusername = username5)
 
 @app.route('/vehiclelisting')
 def vehiclelisting():
-    return render_template('VehicleListing.html')
+     if 'username' in session:  
+        username6 = session['username'] 
+    return render_template('VehicleListing.html',homepageusername = username6)
 
 
 if __name__ == '__main__':
