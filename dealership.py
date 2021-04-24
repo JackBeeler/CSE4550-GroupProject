@@ -106,8 +106,8 @@ def logout():
 #contact
 @app.route('/contact')
 def contact():
-        if 'username' in session:
-            username3 = session['username']
+    if 'username' in session:
+        username3 = session['username']
         
     
     
@@ -116,9 +116,11 @@ def contact():
 #about
 @app.route('/about')
 def about():
-        if 'username' in session:  
-             username4 = session['username'] 
-     
+    if 'username' in session:  
+        username4 = session['username'] 
+        
+        
+    
     return render_template('about.html', homepageusername = username4)
 
 
@@ -131,10 +133,11 @@ def searchresults():
 
 @app.route('/vehiclelisting')
 def vehiclelisting():
-         if 'username' in session:  
-            username6 = session['username'] 
+    if 'username' in session:  
+          username6 = session['username'] 
+            
      
-    return render_template('VehicleListing.html',homepageusername = username6)
+   return render_template('VehicleListing.html',homepageusername = username6)
 
 #@app.route('/favorites')
 #def vehiclelisting():
