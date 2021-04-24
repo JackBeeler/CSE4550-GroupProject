@@ -150,7 +150,7 @@ def favorites():
      if 'username' in session:  
         username6 = session['username'] 
         return render_template('favorites.html',homepageusername = username6)
-    else:
+     else:
         return render_template('favorites.html')
      
 
