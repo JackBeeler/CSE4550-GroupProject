@@ -126,18 +126,18 @@ def about():
 
 @app.route('/searchresults')
 def searchresults():
-         if 'username' in session:  
-            username5 = session['username'] 
+    if 'username' in session:  
+        username5 = session['username'] 
      
     return render_template('SearchResults.html',homepageusername = username5)
 
 @app.route('/vehiclelisting')
 def vehiclelisting():
     if 'username' in session:  
-          username6 = session['username'] 
+        username6 = session['username'] 
             
      
-   return render_template('VehicleListing.html',homepageusername = username6)
+    return render_template('VehicleListing.html',homepageusername = username6)
 
 #@app.route('/favorites')
 #def vehiclelisting():
