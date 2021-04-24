@@ -91,7 +91,7 @@ def login():
 def homepagelogged():
     if 'username' in session:  
         username1 = session['username']  
-       
+       else:
     return render_template('homepageLoggedIn.html', homepageusername = username1)
 
 
@@ -115,7 +115,8 @@ def contact():
 @app.route('/about')
 def about():
      if 'username' in session:  
-        username4 = session['username']  
+        username4 = session['username'] 
+        else:
     return render_template('about.html', homepageusername = username4)
 
 
@@ -123,18 +124,21 @@ def about():
 def searchresults():
      if 'username' in session:  
         username5 = session['username'] 
+        else:
     return render_template('SearchResults.html',homepageusername = username5)
 
 @app.route('/vehiclelisting')
 def vehiclelisting():
      if 'username' in session:  
         username6 = session['username'] 
+        else:
     return render_template('VehicleListing.html',homepageusername = username6)
 
 @app.route('/favorites')
 def vehiclelisting():
      if 'username' in session:  
         username6 = session['username'] 
+        else:
     return render_template('favorites.html',homepageusername = username6)
 
 
