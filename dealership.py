@@ -102,7 +102,11 @@ def logout():
 #contact
 @app.route('/contact')
 def contact():
-    return render_template('Contact Us.html')
+     if 'username' in session:
+        username3 = session['username']
+        return render_template('Contact Us.html', homepageusername = username3)
+    else:
+        return render_template('Contact Us.html')
 
 #about
 @app.route('/about')
