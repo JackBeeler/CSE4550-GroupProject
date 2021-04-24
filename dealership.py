@@ -96,6 +96,7 @@ def homepagelogged():
     return render_template('homepageLoggedIn.html', homepageusername = username1)
 
 
+
 @app.route('/logout')
 def logout():
     session.pop('loggedin', None)
@@ -151,7 +152,7 @@ def favorites():
         username6 = session['username'] 
         return render_template('favorites.html',homepageusername = username6)
      else:
-        return render_template('favorites.html')
+        return render_template('noFavorites.html')
      
 
 
