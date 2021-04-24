@@ -85,7 +85,8 @@ def login():
 
 @app.route('/homepageloggedIn')
 def homepagelogged():
-    
+    if 'username' in session:  
+        homepageusername = session['username']  
        
     return render_template('homepageLoggedIn.html')
 
