@@ -152,7 +152,7 @@ def favorites():
         username6 = session['username'] 
         return render_template('favorites.html',homepageusername = username6)
      else:
-        return render_template('noFavorites.html')
+        return render_template('SignUp.html')
      
 
 
