@@ -85,7 +85,7 @@ def login():
 
 @app.route('/homepageloggedIn')
 def homepagelogged():
-    request.form['homepageusername'] = session['username']
+    
        
     return render_template('homepageLoggedIn.html')
 
