@@ -108,16 +108,17 @@ def logout():
 def contact():
     if 'username' in session:
         username3 = session['username']
-        
+        return render_template('Contact Us.html',homepageusername = username3)    
+    else:
+        return render_template('Contact Us.html')
     
-    
-    return render_template('Contact Us.html',homepageusername = username3)
 
 #about
 @app.route('/about')
 def about():
     if 'username' in session:  
-        username4 = session['username'] 
+        username4 = session['username']
+        
         
         
     
