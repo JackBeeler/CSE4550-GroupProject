@@ -111,17 +111,13 @@
   </div>
 </div>
 	  <table name = resultsTable, id = resultstable style="width:100%">
+		  {% for row in data %}
   <tr>
-    <th>Make</th>
-    <th>Model</th> 
-    <th>Year</th>
+	  {% for d in row %}
+    <td>{{d}}</td>
+	  {% endfor %}
   </tr>
-  <tr>
-  	<td><img src="{{vehicleImage}}" alt="" border=3 height=100 width=100></img></td>
-    <td>{{make}}</td>
-    <td>{{model}}</td>
-    <td>{{year}}</td>
-  </tr>
+		  {% endfor %}
 </table>    
         </div>
       </div>
