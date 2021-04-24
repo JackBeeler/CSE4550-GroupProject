@@ -76,17 +76,40 @@
            
   <div class="wrapper"> </div>
   <div class="page-content">
-    <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div class="dropdown", name = dropdown1, id = dropdown1, class = dropdown2>
+  <button onclick="myFunction()" class="dropbtn">Make</button>
+  <div id="myDropdown" class="dropdown-content">
+	  <form action="?" method="post">
+    <a href="ChevroletCars", name = "Chevrolet">Chevrolet</a>
+    <a href="FordCars", name = "Ford", id = "Ford">Ford</a>
+    <a href="HondaCars", name = "Honda", id = "Honda">Honda</a>
+    <a href="KiaCars", name = "Kia", id = "Kia">Kia</a>
+    <a href="NissanCars", name = Nissa>Nissan</a>
+    <a href="ToyotaCars">Toyota</a>
+    <a href="VolkswagonCars">Volkswagon</a>
+	</form>
+	  
+	   <div class="dropdown", name = dropdown2, id = dropdown2, class = dropdown2>
+  <button onclick="myFunction()" class="dropbtn">Price</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#about">About</a>
-    <a href="#base">Base</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#custom">Custom</a>
-    <a href="#support">Support</a>
-    <a href="#tools">Tools</a>
+	  <form action="?" method="post">
+    <a href="Under $25,000">Under $25,000</a>
+    <a href="Under $20,000">Under $20,000</a>
+    <a href="Under $15,000">Under $15,000</a>
+	</form>
+	  
+	  <div class="dropdown", name = dropdown3, id = dropdown3, class = dropdown3>
+  <button onclick="myFunction()" class="dropbtn">Color</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+	  <form action="?" method="post">
+    <a href="WhiteCars">White</a>
+    <a href="RedCars">Red</a>
+    <a href="BlackCars">Black</a>
+<a href="SilverCars">Silver
+	</form>
+	  
   </div>
 </div>
 	  <table name = resultsTable, id = resultstable style="width:100%">
@@ -184,18 +207,15 @@ function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
   }
 }
