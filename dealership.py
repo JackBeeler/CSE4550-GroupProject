@@ -127,16 +127,17 @@ def about():
 
 @app.route('/searchresults')
 def searchresults():
-    if 'username' in session:  
-        username5 = session['username']
-        if request.method == 'POST':
-        
-            cursor = mysql.connection.cursor()
+    
+    cursor = mysql.connection.cursor()
             cursor.execute('SELECT * FROM inventory')
             data = cursor.fetchall()
+            print(data)
+    
+    if 'username' in session:  
+        username5 = session['username']    
             return render_template('SearchResults.html',homepageusername = username5, data=data)
         else:
-            return render_template('SearchResults.html')
+            return render_template('SearchResults.html', data=data)
      
     
 
