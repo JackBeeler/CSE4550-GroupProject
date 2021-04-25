@@ -247,10 +247,10 @@
               <div id="element-5964e00c42ad41d999f8219bad6ac96a" class="element-container element-type-inventorylisttitle  row" style="width: 100%; ">
                 <div class="vehicle-label">
                   <div class="pull-left accent-color2 inventory-special-heading"></div>
-					{for make in data %}
+					
 <div class="col-xl-11 offset-xl-1 offset-lg-0 col-lg-12" style="margin-top: -5px;"> <a class="accent-color1" href="vehiclelisting" title="NAME OF CAR OR TRUCK HERE" target="_self">{{make}}</a>
 					</div>
-					{% endfor %}
+					
                 </div>
               </div>
             </div>
@@ -274,9 +274,9 @@
                 <div class="palette-bg1 inventory-photo-column col-sm-12 col-xl-9 col-lg-11 col-md-10">
                   <div class="row">
                     <div class="col-xs-12 col-xl-10 col-lg-9" style="padding: 2px">
-						{% for carPictureSource in row %}
+						
                       <div class="image"> <a class="inventory-photo" href="#" target="_self"> <img style="width: 100%;" class="lazy" src={{carPictureSource}}></a></div>
-						{% endfor %}
+						
                     </div>
                   </div>
                   <div class="clearfix" style="padding: 4px 2px 2px 2px;">
@@ -290,27 +290,27 @@
                 <div class="inventory-details">
                   <div>
                     <div style="float: left; border: 1px solid #333; width: 15px; height: 15px; margin: 1px 5px 1px 0px; background-color: #050505;"></div>
-					  {% for color in data %}
+					  
                     <span class="Extcolor">{{color}}</span></div>
-					{% endfor %}
+					
                   
                     <div style="float: left; border: 1px solid #333; width: 15px; height: 15px; margin: 1px 5px 1px 0px; background-color: #050505;"></div>
                   {% for transmission in data %}
                   <div class="transmission">{{transmission}}</div>
-					{% endfor %}
+					
                   <div class="fuel">Gasoline</div>
-					{% for mileage in row %}
+					
                   <div><span class="mileage">{{mileage}}</span></div>
-					{% endfor %}
+					
                 </div>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 element-container-2 col-xl-2" style="">
               <div id="element-5c876e74196d4907b94017613ea9d50a" class="element-container element-type-inventorylistdata  row" style="width: 100%; ">
                 <div class="inventory-details">
-			{% for vin in row %}
+			
                   <div><span class="preamble">VIN:&nbsp; </span><span class="vin">{{vin}}</span></div>
-			{% endfor %}
+			
                 </div>
               </div>
             </div>
@@ -324,9 +324,9 @@
                 <div class="col-md-12 inventory-price-column" style="margin: 4px;">
                   <div class="palette-bg1 inventory-price-container">
                     <div class="pricelabel col-lg-12">Internet Price</div>
-					  {% for price in row %}
+					  
                     <div class="pricevalue1 accent-color1 col-lg-10" style="font-size: 20px;"><b><span class="currency-symbol">$</span>{{price}}</b></div>
-					  {% endfor %}
+					  
                     <div style="padding-top: 5px;"></div>
                   </div>
                 </div>
