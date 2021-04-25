@@ -130,7 +130,8 @@ def searchresults():
     
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory')
-    str(data) = cursor.fetchall()
+    data1 = cursor.fetchall()
+    data= str(data1)
     
   
     
