@@ -307,7 +307,9 @@
             <div class="col-lg-3 col-md-3 col-sm-3 element-container-2 col-xl-2" style="">
               <div id="element-5c876e74196d4907b94017613ea9d50a" class="element-container element-type-inventorylistdata  row" style="width: 100%; ">
                 <div class="inventory-details">
+			{% for vin in row %}
                   <div><span class="preamble">VIN:&nbsp; </span><span class="vin">{{vin}}</span></div>
+			{% endfor %}
                 </div>
               </div>
             </div>
@@ -321,7 +323,7 @@
                 <div class="col-md-12 inventory-price-column" style="margin: 4px;">
                   <div class="palette-bg1 inventory-price-container">
                     <div class="pricelabel col-lg-12">Internet Price</div>
-					  {% for d in row %}
+					  {% for price in row %}
                     <div class="pricevalue1 accent-color1 col-lg-10" style="font-size: 20px;"><b><span class="currency-symbol">$</span>{{price}}</b></div>
 					  {% endfor %}
                     <div style="padding-top: 5px;"></div>
