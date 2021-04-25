@@ -130,11 +130,8 @@ def searchresults():
     
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory')
-    data1 = cursor.fetchall()
-    data= str(data1)
-    
-  
-    
+    data = cursor.fetchall()
+
     if 'username' in session:  
         username5 = session['username'] 
         return render_template('SearchResults.html',homepageusername = username5, data=data)
