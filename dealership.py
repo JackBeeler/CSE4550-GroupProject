@@ -139,6 +139,7 @@ def searchresults():
     color = [i[4] for i in cursor.description]
     mileage = [i[5] for i in cursor.description]
     price = [i[6] for i in cursor.description]
+    our_price = [i[7] for i in cursor.description]
     transmission = [i[8] for i in cursor.description]
     body_styple = [i[9] for i in cursor.description]
     carPictureSource = [i[10] for i in cursor.description]
