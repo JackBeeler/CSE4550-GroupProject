@@ -131,7 +131,7 @@ def searchresults():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT make, model, year, color, mileage, our_price, transmission, body_style FROM inventory')
     data = cursor.fetchall()
-    print(data)
+    
     
     if 'username' in session:  
         username5 = session['username'] 
