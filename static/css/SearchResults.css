@@ -1,5 +1,12 @@
 ﻿
 
+.vehicleImage{
+	height: 80px;
+	margin: auto;
+	align-content: center;
+	padding: auto;
+}
+
 table{
 	font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
