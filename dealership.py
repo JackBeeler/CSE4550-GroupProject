@@ -129,7 +129,7 @@ def about():
 def searchresults():
     
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT make, model, year, color, mileage, our_price, transmission, body_style FROM inventory')
+    cursor.execute('SELECT * FROM inventory')
     data = cursor.fetchall()
     num_fields = len(cursor.description)
     vin = [i[0] for i in cursor.description]
