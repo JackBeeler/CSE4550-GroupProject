@@ -131,13 +131,26 @@ def searchresults():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT make, model, year, color, mileage, our_price, transmission, body_style FROM inventory')
     data = cursor.fetchall()
+    num_fields = len(cursor.description)
+    vin = [i[0] for i in cursor.description]
+    make = [i[1] for i in cursor.description]
+    model = [i[2] for i in cursor.description]
+    year = [i[3] for i in cursor.description]
+    color = [i[4] for i in cursor.description]
+    mileage = [i[5] for i in cursor.description]
+    price = [i[6] for i in cursor.description]
+    transmission = [i[8] for i in cursor.description]
+    body_styple = [i[9] for i in cursor.description]
+    carPictureSource = [i[10] for i in cursor.description]
+    
+    
     
     
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data)
+        return render_template('SearchResults.html',homepageusername = username5, data=data, vin=vin, make=make, model=model, year=year, color=color, mileage=mileage, price=price, transmission=transmission, body_type=body_type, carPictureSource=carPictureSource)
     else:
-        return render_template('SearchResults.html', data=data)
+        return render_template('SearchResults.html', homepageusername = username5, data=data, vin=vin, make=make, model=model, year=year, color=color, mileage=mileage, price=price, transmission=transmission, body_type=body_type, carPictureSource=carPictureSource)
      
     
 
