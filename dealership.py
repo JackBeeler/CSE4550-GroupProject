@@ -129,20 +129,20 @@ def about():
 def searchresults():
     
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory')
+    cursor.execute('SELECT vin, make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo FROM inventory')
     data = cursor.fetchall()
     num_fields = len(cursor.description)
     vin = [i[0] for i in cursor.description]
     make = [i[1] for i in cursor.description]
     model = [i[2] for i in cursor.description]
     year = [i[3] for i in cursor.description]
-   # color = [i[4] for i in cursor.description]
-    #mileage = [i[5] for i in cursor.description]
-   # price = [i[6] for i in cursor.description]
-    #our_price = [i[7] for i in cursor.description]
-    #transmission = [i[8] for i in cursor.description]
-    #body_style = [i[9] for i in cursor.description]
-    #carPictureSource = [i[10] for i in cursor.description]
+    color = [i[4] for i in cursor.description]
+    mileage = [i[5] for i in cursor.description]
+    price = [i[6] for i in cursor.description]
+    our_price = [i[7] for i in cursor.description]
+    transmission = [i[8] for i in cursor.description]
+    body_style = [i[9] for i in cursor.description]
+    carPictureSource = [i[10] for i in cursor.description]
     
     
     
