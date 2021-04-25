@@ -151,7 +151,7 @@ def searchresults():
         username5 = session['username'] 
         return render_template('SearchResults.html',homepageusername = username5, data=data, vin=vin, make=make, model=model, year=year, color=color, mileage=mileage, price=price, transmission=transmission, body_type=body_type, carPictureSource=carPictureSource)
     else:
-        return render_template('SearchResults.html', homepageusername = username5, data=data, vin=vin, make=make, model=model, year=year, color=color, mileage=mileage, price=price, transmission=transmission, body_type=body_type, carPictureSource=carPictureSource)
+        return render_template('SearchResults.html', data=data, vin=vin, make=make, model=model, year=year, color=color, mileage=mileage, price=price, transmission=transmission, body_type=body_type, carPictureSource=carPictureSource)
      
     
 
