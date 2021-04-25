@@ -130,33 +130,15 @@ def searchresults():
     
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory')
-    data = cursor.fetchall()
-    for row in data:
-        vin = row[0]
-        make = row[1]
-        model = row[2]
-        year = row[3]
-        color = row[4]
-        mileage = row[5]
-        price = row[6]
-        our_price = row[7]
-        transmission = row[8]
-        body_style = row[9]
-        carPictureSource = row[10]
-        
-        
-       
-      
+    str(data) = cursor.fetchall()
+    
   
-    
-    
-    
     
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, vin=vin, make=make, model=model, year=year, color=color, mileage=mileage, price=price, transmission=transmission, body_style=body_style, carPictureSource=carPictureSource)
+        return render_template('SearchResults.html',homepageusername = username5, data=data)
     else:
-        return render_template('SearchResults.html', data=data, vin=vin, make=make, model=model, year=year, color=color, mileage=mileage, price=price, transmission=transmission, body_style=body_style, carPictureSource=carPictureSource)
+        return render_template('SearchResults.html', data=data)
      
     
 
