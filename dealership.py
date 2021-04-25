@@ -128,7 +128,7 @@ def about():
 @app.route('/searchresults')
 def searchresults():
     
-    cursor = connection.cursor()
+    cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory')
     data = cursor.fetchall()
     for row in data:
