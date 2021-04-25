@@ -134,27 +134,27 @@ def searchresults():
     for i in range(len(cursor.description)):
        desc = cursor.description[i]
        if i == 0:
-            desc[0] == vin
+            vin = desc[0] 
        elif i == 1:
-            desc[0] == make
+            make = desc[0]
        elif i == 2:
-            desc[0] == model
+            model = desc[0]
        elif i == 3:
-            desc[0] == year
+            year = desc[0]
        elif i ==4:
-            desc[0]== color
+            color = desc[0] 
        elif i ==5:
-            desc[0] == mileage
+            mileage = desc[0] 
        elif i == 6:
-            desc[0] == price
+            price = desc[0] 
        elif i == 7:
-            desc[0] == our_price
+            our_price = desc[0]
        elif i == 8:
-            desc[0] == transmission
+            transmission = desc[0] 
        elif i == 9:
-            desc[0] == body_style
+            body_style = desc[0] 
        elif i == 10:
-            desc[0] == carPictureSource
+            carPictureSource = desc[0] 
   
     
     
