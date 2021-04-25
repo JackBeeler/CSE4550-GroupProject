@@ -1,5 +1,36 @@
 ﻿
 
+table{
+	font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+
+	margin:auto;
+	background-color: black;
+	color: white;
+
+}
+
+td{
+border: 1px solid #ddd;
+  padding: 5px;	
+}
+th{
+padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #8c868b;
+  color: white;
+}
+
+#links-title.text-u3{
+	font-weight: 100 !important;
+}
+#footer-container{
+	
+	max-width: 1000px;
+	hieght: auto;
+}
+ tr:hover {background-color: #ddd;}
 
 
 
