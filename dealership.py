@@ -128,7 +128,7 @@ def about():
 @app.route('/searchresults')
 def searchresults():
     
-    cursor = mysql.connection.cursor()
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute('SELECT vin, make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo FROM inventory')
     data = cursor.fetchone()
     num_fields = len(cursor.description)
@@ -139,7 +139,6 @@ def searchresults():
     color = [i[4] for i in cursor.description]
     mileage = [i[5] for i in cursor.description]
     price = [i[6] for i in cursor.description]
-    our_price = [i[7] for i in cursor.description]
     transmission = [i[8] for i in cursor.description]
     body_style = [i[9] for i in cursor.description]
     carPictureSource = [i[10] for i in cursor.description]
