@@ -127,7 +127,7 @@ def about():
 @app.route('/searchresults/hatchbacks')
 def searchresultshatchbacks():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT body_style FROM inventory  WHERE body_style = 'hatchback')
+    cursor.execute('SELECT body_style FROM inventory  WHERE body_style = hatchback')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
