@@ -133,10 +133,8 @@ def searchresultshatchbacks():
 
     if 'username' in session:  
         username5 = session['username'] 
-        @app.route('/searchresults')
         return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        @app.route('/searchresults')
         return render_template('SearchResults.html', data=data, numRows=numRows)   
         
 @app.route('/searchresults/sedans')
