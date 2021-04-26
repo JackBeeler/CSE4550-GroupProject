@@ -266,7 +266,7 @@ def searchresultsford():
     
     
     
-@app.route('lamborghini')
+@app.route('/lamborghini')
 def searchresultslamborghini():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "lamborghini"')
