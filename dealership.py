@@ -126,7 +126,6 @@ def about():
         
 @app.route('/searchresults/hatchbacks')
 def searchresultshatchbacks():
-    @app.route('/searchresults')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE body_style = "hatchback"')
     data = cursor.fetchall()
@@ -134,8 +133,10 @@ def searchresultshatchbacks():
 
     if 'username' in session:  
         username5 = session['username'] 
+        @app.route('/searchresults')
         return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
     else:
+        @app.route('/searchresults')
         return render_template('SearchResults.html', data=data, numRows=numRows)   
         
 @app.route('/searchresults/sedans')
