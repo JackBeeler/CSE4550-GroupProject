@@ -237,7 +237,7 @@ def searchresultsvolkswagon():
     
    
 @app.route('/chevrolet')
-def searchresultstoyota():
+def searchresultschevrolet():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "chevrolet"')
     data = cursor.fetchall()
