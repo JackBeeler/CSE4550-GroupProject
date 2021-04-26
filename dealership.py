@@ -225,7 +225,7 @@ def searchresultshonda():
 @app.route('/volkswagon')
 def searchresultsvolkswagon():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE make = "volkswagon"')
+    cursor.execute('SELECT * FROM inventory  WHERE make = "volkswagen"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -620,6 +620,240 @@ def searchresultslamborghini():
     
     
     
+@app.route('/price8000')
+def searchresultsprice8000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE our_price < 8000')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)  
+    
+    
+@app.route('/price15000')
+def searchresultsprice15000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE our_price < 15000')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)        
+    
+    
+@app.route('/price20000')
+def searchresultsprice20000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE our_price < 20000')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+@app.route('/price25000')
+def searchresultsprice8000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE our_price < 25000')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+@app.route('/black')
+def searchresultsblack():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE color = "black"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    @app.route('/blue')
+def searchresultsblue():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE color = "blue"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+    
+    
+@app.route('/grey')
+def searchresultsgrey():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE color = "grey"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+@app.route('/silver')
+def searchresultssilver():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE color = "silver"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+@app.route('/white')
+def searchresultswhite():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE color = "white"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+@app.route('/green')
+def searchresultsgreen():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE color = "green"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+@app.route('/red')
+def searchresultsred():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE color = "red"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+@app.route('/miles35000')
+def searchresultsmiles35000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 35000')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)   
+    
+    
+    
+@app.route('/miles40000')
+def searchresultsmiles40000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 65000)
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+@app.route('/miles50000')
+def searchresultsmiles50000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 50000)
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+                       
+                   
+              
+@app.route('/miles65000')
+def searchresultsmiles65000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 65000)
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+                       
+                   
+@app.route('/miles75000')
+def searchresultsmiles75000():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 75000)
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)         
+                   
+                   
+                   
         
 @app.route('/searchresults')
 def searchresults():
