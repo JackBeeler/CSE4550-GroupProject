@@ -135,9 +135,9 @@ def searchresults():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numFound=numFound)
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numFound)
     else:
-        return render_template('SearchResults.html', data=data, numFound=numFound)
+        return render_template('SearchResults.html', data=data, numRows=numFound)
      
     
 
