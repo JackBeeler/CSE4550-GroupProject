@@ -180,7 +180,7 @@ def searchresultscoupe():
     
     
 @app.route('/nissans')
-def searchresultscoupe():
+def searchresultsnissans():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "nissan"')
     data = cursor.fetchall()
