@@ -124,7 +124,7 @@ def about():
         return render_template('about.html')
         
         
-@app.route('/searchresults/hatchbacks')
+@app.route('/hatchbacks')
 def searchresultshatchbacks():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE body_style = "hatchback"')
@@ -137,7 +137,7 @@ def searchresultshatchbacks():
     else:
         return render_template('SearchResults.html', data=data, numRows=numRows)   
         
-@app.route('/searchresults/sedans')
+@app.route('/sedans')
 def searchresultsedan():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE body_style = "sedan"')
