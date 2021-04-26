@@ -664,7 +664,7 @@ def searchresultsprice20000():
     
     
 @app.route('/price25000')
-def searchresultsprice8000():
+def searchresultsprice25000():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE our_price < 25000')
     data = cursor.fetchall()
