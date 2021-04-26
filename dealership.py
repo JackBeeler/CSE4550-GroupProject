@@ -165,7 +165,7 @@ def searchresultsconvertable():
         return render_template('SearchResults.html', data=data, numRows=numRows)
     
     
-    @app.route('/coupes')
+@app.route('/coupes')
 def searchresultscoupe():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE body_style = "coupe"')
@@ -179,7 +179,7 @@ def searchresultscoupe():
         return render_template('SearchResults.html', data=data, numRows=numRows)
     
     
-     @app.route('/nissans')
+@app.route('/nissans')
 def searchresultscoupe():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "nissan"')
