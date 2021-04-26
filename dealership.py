@@ -799,7 +799,7 @@ def searchresultsmiles35000():
 @app.route('/miles40000')
 def searchresultsmiles40000():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE mileage < 65000)
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 65000')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -813,7 +813,7 @@ def searchresultsmiles40000():
 @app.route('/miles50000')
 def searchresultsmiles50000():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE mileage < 50000)
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 50000')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -828,7 +828,7 @@ def searchresultsmiles50000():
 @app.route('/miles65000')
 def searchresultsmiles65000():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE mileage < 65000)
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 65000')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -842,7 +842,7 @@ def searchresultsmiles65000():
 @app.route('/miles75000')
 def searchresultsmiles75000():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE mileage < 75000)
+    cursor.execute('SELECT * FROM inventory  WHERE mileage < 75000')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
