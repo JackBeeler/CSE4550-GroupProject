@@ -6,7 +6,7 @@ import re
 
 app = Flask(__name__)
 
-app.secret_key = 'deez nuts'
+app.secret_key = '1234'
 
 # DB configs
 db = yaml.load(open('db.yaml'))
