@@ -235,6 +235,21 @@ def searchresultsvolkswagon():
     else:
         return render_template('SearchResults.html', data=data, numRows=numRows)
     
+   
+@app.route('/chevrolet')
+def searchresultstoyota():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE make = "chevrolet"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+    
     
 @app.route('/toyota')
 def searchresultstoyota():
