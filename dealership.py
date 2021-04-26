@@ -131,7 +131,7 @@ def searchresults():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory')
     data = cursor.fetchall()
-    numFound = cursor.rowcount()
+    numFound = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
