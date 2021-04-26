@@ -194,7 +194,7 @@ def searchresultsnissans():
     
     
 @app.route('/kia')
-def searchresultsnissans():
+def searchresultskia():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "kia"')
     data = cursor.fetchall()
@@ -209,7 +209,7 @@ def searchresultsnissans():
     
     
 @app.route('/honda')
-def searchresultsnissans():
+def searchresultshonda():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "honda"')
     data = cursor.fetchall()
@@ -223,7 +223,7 @@ def searchresultsnissans():
     
     
 @app.route('/volkswagon')
-def searchresultsnissans():
+def searchresultsvolkswagon():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "volkswagon"')
     data = cursor.fetchall()
@@ -237,7 +237,7 @@ def searchresultsnissans():
     
     
 @app.route('/toyota')
-def searchresultsnissans():
+def searchresultstoyota():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "toyota"')
     data = cursor.fetchall()
@@ -252,7 +252,7 @@ def searchresultsnissans():
     
     
 @app.route('/ford')
-def searchresultsnissans():
+def searchresultsford():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "ford"')
     data = cursor.fetchall()
@@ -267,7 +267,7 @@ def searchresultsnissans():
     
     
 @app.route('lamborghini')
-def searchresultsnissans():
+def searchresultslamborghini():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE make = "lamborghini"')
     data = cursor.fetchall()
