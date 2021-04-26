@@ -281,6 +281,22 @@ def searchresultsford():
     
     
     
+@app.route('/sentra')
+def searchresultsoptima():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE model = "sentra"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)    
+    
+    
+    
+    
 @app.route('/optima')
 def searchresultsoptima():
     cursor = mysql.connection.cursor()
