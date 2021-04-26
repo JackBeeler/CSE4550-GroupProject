@@ -126,6 +126,7 @@ def about():
         
 @app.route('/searchresults/hatchbacks')
 def searchresultshatchbacks():
+    @app.route('/searchresults')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE body_style = "hatchback"')
     data = cursor.fetchall()
