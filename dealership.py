@@ -131,12 +131,13 @@ def searchresults():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory')
     data = cursor.fetchall()
+    numFound = cursor.rowcount()
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data)
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numFound=numFound)
     else:
-        return render_template('SearchResults.html', data=data)
+        return render_template('SearchResults.html', data=data, numFound=numFound)
      
     
 
