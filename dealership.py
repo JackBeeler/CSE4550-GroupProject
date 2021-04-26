@@ -282,7 +282,7 @@ def searchresultsford():
     
     
 @app.route('/sentra')
-def searchresultsoptima():
+def searchresultssentra():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE model = "sentra"')
     data = cursor.fetchall()
