@@ -692,7 +692,7 @@ def searchresultsblack():
         return render_template('SearchResults.html', data=data, numRows=numRows)    
     
     
-    @app.route('/blue')
+@app.route('/blue')
 def searchresultsblue():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE color = "blue"')
