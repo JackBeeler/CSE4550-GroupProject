@@ -123,25 +123,6 @@ def about():
     else:
         return render_template('about.html')
         
-
-        
-        
-        @app.route('/searchresults/searchresults/hatchbacks')
-def searchresultshatchbacks():
-    cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE body_style = "hatchback"')
-    data = cursor.fetchall()
-    numRows = cursor.rowcount
-
-    if 'username' in session:  
-        username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
-    else:
-        return render_template('SearchResults.html', data=data, numRows=numRows) 
-        
-        
-        
-        
         
 @app.route('/searchresults/hatchbacks')
 def searchresultshatchbacks():
