@@ -354,7 +354,7 @@ def searchresultsauris():
     
     
     
-    @app.route('/beetle')
+@app.route('/beetle')
 def searchresultsbeetle():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE model = "beetle"')
