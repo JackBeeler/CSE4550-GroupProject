@@ -125,11 +125,11 @@ def about():
         
 
 @app.route('/searchresults/hatchbacks')
-def searchresultshatchbacks():
+def searchresults/hatchbacks():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE body_style = hatchback')
-      data = cursor.fetchall()
-    numRows = cursor.rowcount
+     data = cursor.fetchall()
+     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
