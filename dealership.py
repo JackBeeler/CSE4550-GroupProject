@@ -29,13 +29,15 @@ def homepage():
           cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
           cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search,))
           query= cursor.fetchone()
+          numRows = cursor.rowcount
           
           if query:
                return render_template('SearchResults.html',  query=query, numRows=numRows)
           else:
                cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
                cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search,))
-               query1= cursor1.fetchone() 
+               query1= cursor1.fetchone()
+               numRows = cursor1.rowcount
                         
           if query1:
                return render_template('SearchResults.html',  query1=query1, numRows=numRows)
@@ -43,6 +45,7 @@ def homepage():
                cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
                cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search,))
                query2= cursor2.fetchone()
+               numRows = cursor2.rowcount
           
           if query2:
                return render_template('SearchResults.html',  query2=query2, numRows=numRows)
@@ -52,12 +55,14 @@ def homepage():
                cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
                cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search,))
                query= cursor.fetchone()
+               numRows = cursor.rowcount
                if query:
                     return render_template('SearchResults.html',  query=query, numRows=numRows)
                else:
                     cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
                     cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search,))
-                    query1= cursor1.fetchone() 
+                    query1= cursor1.fetchone()
+                    numRows = cursor1.rowcount
                         
                if query1:
                     return render_template('SearchResults.html',  query1=query1, numRows=numRows)
@@ -65,6 +70,7 @@ def homepage():
                     cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
                     cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search,))
                     query2= cursor2.fetchone()
+                    numRows = cursor2.rowcount
           
                if query2:
                     return render_template('SearchResults.html',  query2=query2, numRows=numRows)
