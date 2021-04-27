@@ -30,12 +30,12 @@ def homepage():
           cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search,))
           query= cursor.fetchone()
           
-        if query:
-           return render_template('SearchResults.html', homepageusername = username2, query=query, numRows=numRows)
-        else:
-           cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-           cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search,))
-           query1= cursor1.fetchone() 
+          if query:
+               return render_template('SearchResults.html', homepageusername = username2, query=query, numRows=numRows)
+          else:
+               cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+               cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search,))
+               query1= cursor1.fetchone() 
                         
            if query1:
                return render_template('SearchResults.html', homepageusername = username2, query1=query1, numRows=numRows)
