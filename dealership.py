@@ -21,6 +21,10 @@ mysql = MySQL(app)
 #main route
 @app.route('/', methods=['GET', 'POST'])
 def homepage():
+     
+     if 'username' in session:
+         username2 = session['username']
+     
      if request.method == 'POST' and 'search' in request.form:
         Search = request.form['search']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -28,24 +32,25 @@ def homepage():
         query= cursor.fetchall()
           
         if query:
-           return render_template('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
+           return render_template('SearchResults.html', homepageusername = username2, query=query, numRows=numRows)
         else:
            cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
            cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search))
-           query= cursor1.fetchall() 
+           query1= cursor1.fetchall() 
                         
-        if query:
-           return render_template('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
+        if query1:
+           return render_template('SearchResults.html', homepageusername = username2, query1=query1, numRows=numRows)
         else:
           cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
           cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search))
-          query= cursor2.fetchall()  
-        if query:
-          return render_template('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
+          query2= cursor2.fetchall()
+          
+        if query2:
+          return render_template('SearchResults.html', homepageusername = username2, query2=query2, numRows=numRows)
                             
         if 'username' in session:  
           username5 = session['username'] 
-          return render_template('SearchResults.html',homepageusername = username5, query=query, numRows=numRows)   
+          return render_template('SearchResults.html',homepageusername = username2, query3=query3, numRows=numRows)   
     
     
      if 'username' in session:
