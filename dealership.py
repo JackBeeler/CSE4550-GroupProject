@@ -32,7 +32,7 @@ def homepage():
           conn.commit()
           data1= cursor.fetchall()
           numRows = cursor.rowcount
-          print data1
+          print(data1)
           
           if data1:
                return render_template('SearchResults.html',  data=data1, numRows=numRows)
