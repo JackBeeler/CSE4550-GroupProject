@@ -44,7 +44,7 @@ def homepage():
                cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search,))
                query2= cursor2.fetchone()
           
-           if query2:
+          if query2:
                return render_template('SearchResults.html', homepageusername = username2, query2=query2, numRows=numRows)
      else:
          if request.method == 'POST' and 'search' in request.form:
