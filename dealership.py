@@ -48,11 +48,11 @@ def homepage():
           return render_template('SearchResults.html',homepageusername = username5, query=query, numRows=numRows)   
     
     
-    if 'username' in session:
-        username2 = session['username']
-        return render_template('homepageLoggedIn.html', homepageusername = username2)
-    else:
-        return render_template('homepage.html')
+     if 'username' in session:
+         username2 = session['username']
+         return render_template('homepageLoggedIn.html', homepageusername = username2)
+     else:
+         return render_template('homepage.html')
 
 #sign up
 @app.route('/signup', methods=['GET', 'POST'])
