@@ -45,7 +45,7 @@ def homepage():
                             
         if 'username' in session:  
           username5 = session['username'] 
-          return render_template('SearchResults.html',homepageusername = username5, query=query, numRows=numRows))    
+          return render_template('SearchResults.html',homepageusername = username5, query=query, numRows=numRows)   
     
     
     if 'username' in session:
