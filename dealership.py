@@ -26,23 +26,23 @@ def homepage():
         cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search))
         query= cursor.fetchall()
         if query:
-            return redirect(url_for('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
+          return redirect(url_for('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
         else:
-            cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search))
-            query= cursor1.fetchall()               
-         if query:
-            return redirect(url_for('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
+          cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+          cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search))
+          query= cursor1.fetchall()               
+        if query:
+          return redirect(url_for('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
         else:
-            cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search))
-            query= cursor2.fetchall()  
-         if query:
-            return redirect(url_for('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
+          cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+          cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search))
+          query= cursor2.fetchall()  
+        if query:
+           return redirect(url_for('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
                             
         if 'username' in session:  
-            username5 = session['username'] 
-            return render_template('SearchResults.html',homepageusername = username5, query=query, numRows=numRows)    
+           username5 = session['username'] 
+           return render_template('SearchResults.html',homepageusername = username5, query=query, numRows=numRows)    
     
     
     if 'username' in session:
