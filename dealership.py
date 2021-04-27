@@ -19,7 +19,7 @@ mysql = MySQL(app)
 
 
 #main route
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def homepage():
      if request.method == 'POST' and 'search' in request.form:
         Search = request.form['search']
