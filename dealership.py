@@ -48,10 +48,10 @@ def homepage():
                return render_template('SearchResults.html',  query2=query2, numRows=numRows)
      else:
           if request.method == 'POST' and 'search' in request.form:
-          Search = request.form['search']
-          cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-          cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search,))
-          query= cursor.fetchone()
+               Search = request.form['search']
+               cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+               cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search,))
+               query= cursor.fetchone()
           
           if query:
                return render_template('SearchResults.html',  query=query, numRows=numRows)
