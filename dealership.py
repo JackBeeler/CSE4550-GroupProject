@@ -32,7 +32,7 @@ def homepage():
           data1= cursor.fetchall()
           numRows = cursor.rowcount
           
-          if data:
+          if data1:
                return render_template('SearchResults.html',  data=data1, numRows=numRows)
           else:
                cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
