@@ -22,7 +22,7 @@ mysql = MySQL(app)
 @app.route('/', methods=['GET', 'POST'])
 def homepage():
      
-     if 'username' in session:
+     if 'username' not in session:
          username2 = session['username']
          if request.method == 'POST' and 'search' in request.form:
           Search = request.form['search']
