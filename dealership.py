@@ -27,7 +27,7 @@ def homepage():
         query= cursor.fetchall()
      if query:
         return redirect(url_for('SearchResults.html', homepageusername = username5, query=query, numRows=numRows)
-     else:
+    else:
         cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search))
         query= cursor1.fetchall() 
