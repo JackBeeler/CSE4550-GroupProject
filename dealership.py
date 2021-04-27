@@ -28,25 +28,25 @@ def homepage():
      if request.method == 'POST' and 'search' in request.form:
         Search = request.form['search']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM inventory WHERE make like %(Search)s')
-        query= cursor.fetchall()
+        cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search))
+        query= cursor.fetchone()
           
         if query:
            return render_template('SearchResults.html', homepageusername = username2, query=query, numRows=numRows)
         else:
            cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-           cursor1.execute('SELECT * FROM inventory WHERE model like %(Search)s')
-           query1= cursor1.fetchall() 
+           cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search))
+           query1= cursor1.fetchone() 
                         
-        if query1:
-           return render_template('SearchResults.html', homepageusername = username2, query1=query1, numRows=numRows)
-        else:
-          cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-          cursor2.execute('SELECT * FROM inventory WHERE color like %(Search)s')
-          query2= cursor2.fetchall()
+           if query1:
+               return render_template('SearchResults.html', homepageusername = username2, query1=query1, numRows=numRows)
+           else:
+               cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+               cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search))
+               query2= cursor2.fetchone()
           
-        if query2:
-          return render_template('SearchResults.html', homepageusername = username2, query2=query2, numRows=numRows)
+               if query2:
+                    return render_template('SearchResults.html', homepageusername = username2, query2=query2, numRows=numRows)
                             
         if 'username' in session:  
           username5 = session['username'] 
