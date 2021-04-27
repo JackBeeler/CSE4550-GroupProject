@@ -29,8 +29,10 @@ def homepage():
           Search = request.form['search']
           cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
           cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s', (Search, Search, Search,))
+          conn.commit()
           data1= cursor.fetchall()
           numRows = cursor.rowcount
+          print data1
           
           if data1:
                return render_template('SearchResults.html',  data=data1, numRows=numRows)
