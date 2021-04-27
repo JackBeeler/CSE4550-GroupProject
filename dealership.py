@@ -28,28 +28,12 @@ def homepage():
          if request.method == 'POST' and 'search' in request.form:
           Search = request.form['search']
           cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-          cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search,))
+          cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s', (Search, Search, Search,))
           data1= cursor.fetchall()
           numRows = cursor.rowcount
           
           if data1:
                return render_template('SearchResults.html',  data=data1, numRows=numRows)
-          else:
-               cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-               cursor1.execute('SELECT * FROM inventory WHERE model like %s', (Search,))
-               data2= cursor1.fetchall()
-               numRows = cursor1.rowcount
-                        
-          if data2:
-               return render_template('SearchResults.html',  data=data2, numRows=numRows)
-          else:
-               cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-               cursor2.execute('SELECT * FROM inventory WHERE color like %s', (Search,))
-               data3= cursor2.fetchall()
-               numRows = cursor2.rowcount
-          
-          if data3:
-               return render_template('SearchResults.html',  data=data3, numRows=numRows)
     
     
      if 'username' in session:
