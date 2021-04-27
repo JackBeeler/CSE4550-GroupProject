@@ -52,7 +52,6 @@ def homepage():
                cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
                cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search,))
                query= cursor.fetchone()
-          
           if query:
                return render_template('SearchResults.html',  query=query, numRows=numRows)
           else:
