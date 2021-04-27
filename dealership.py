@@ -27,9 +27,8 @@ def homepage():
      else:
          if request.method == 'POST' and 'search' in request.form:
           Search = request.form['search']
-          cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+          cursor = mysql.connection.cursor()
           cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s', (Search, Search, Search,))
-          conn.commit()
           data1= cursor.fetchall()
           numRows = cursor.rowcount
           print(data1)
