@@ -20,7 +20,7 @@ mysql = MySQL(app)
 #main route
 @app.route('/')
 def homepage():
-     if request.method == 'POST' and 'search' in request.form
+     if request.method == 'POST' and 'search' in request.form:
         Search = request.form['search']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM inventory WHERE make like %s', (Search))
