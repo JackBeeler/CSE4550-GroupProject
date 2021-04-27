@@ -251,11 +251,21 @@
     </div>
     </div>
 	<table>
-	  <tr>
-	{% for header in headings %}
-		  <th>{{header}}</th>
-		  {% endfor %}
-		</tr>
+	 <thead>
+    <tr>
+        <th>VIN</th>
+        <th>Make</th>
+        <th>Model</th>
+		<th>Year</th>
+		<th>Color</th>
+		<th>Mileage</th>
+		<th>Price</th>
+		<th>Our Price</th>
+		<th>Transmission</th>
+		<th>Body Style</th>
+		<th>Image</th>
+    </tr>
+    </thead>    
 	{% for row in data %}
 	<tr>
 		{% for cell in row %}
