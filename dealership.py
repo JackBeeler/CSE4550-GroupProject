@@ -32,7 +32,7 @@ def homepage():
           data= cursor.fetchall()
           numRows = cursor.rowcount
           
-          if query:
+          if data:
                return render_template('SearchResults.html',  data=data, numRows=numRows)
           else:
                cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -40,7 +40,7 @@ def homepage():
                data= cursor1.fetchall()
                numRows = cursor1.rowcount
                         
-          if query1:
+          if data:
                return render_template('SearchResults.html',  data=data, numRows=numRows)
           else:
                cursor2 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -48,7 +48,7 @@ def homepage():
                data= cursor2.fetchall()
                numRows = cursor2.rowcount
           
-          if query2:
+          if data:
                return render_template('SearchResults.html',  data=data, numRows=numRows)
     
     
