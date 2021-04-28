@@ -108,7 +108,7 @@ def login():
 def homepagelogged():
   if 'username'  in session:
          username2 = session['username']
-     else:
+  else:
          if request.method == 'POST' and 'search' in request.form:
           Search = request.form['search']
           cursor = mysql.connection.cursor()
