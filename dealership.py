@@ -33,7 +33,7 @@ def homepage():
           numRows = cursor.rowcount
           
           if data1:
-               return render_template('SearchResults.html',  data=data1, numRows=numRows)
+               return render_template('SearchResults.html',  data=data1, numRows=numRows, homepageusername = username2)
      else:
           if request.method == 'POST' and 'search' in request.form:
           Search = request.form['search']
@@ -44,7 +44,7 @@ def homepage():
           print(data1)
           
           if data1:
-               return render_template('SearchResults.html',  data=data1, numRows=numRows,homepageusername = username2)
+               return render_template('SearchResults.html',  data=data1, numRows=numRows)
     
      
      if 'username' in session:
