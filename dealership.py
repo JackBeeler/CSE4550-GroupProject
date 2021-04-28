@@ -947,7 +947,7 @@ def favorites():
                isEmployee = "true"
                msg = ''
                cursor = mysql.connection.cursor()
-               cursor.execute('SELECT * FROM favorites WHERE id = % ', (EmployeeID,))
+               cursor.execute('SELECT * FROM favorites WHERE id = %s ', (EmployeeID,))
                data = cursor.fetchall()          
                if data:
                   numRows = cursor.rowcount
