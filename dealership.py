@@ -923,10 +923,52 @@ def vehiclelisting():
 @app.route('/favorites')
 def favorites():
      if 'username' in session:  
-        username6 = session['username'] 
-        return render_template('favorites.html',homepageusername = username6)
+        username6 = session['username']
+        cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cur.execute('SELECT * FROM customer_login WHERE username = %s', (username6,))
+        customer_login = cur.fetchone()
+        if session['username'] = customer_login['username']:
+            CustomerID = customer_login['customer_id']
+            isUser = true
+            msg = ''
+            cursor = mysql.connection.cursor()
+            cursor.execute('SELECT * FROM favorites WHERE id = % ', (CustomerID,))
+            data = cursor.fetchall()
+            if data:
+               numRows = cursor.rowcount
+               return  render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows = numRows)
+        else:
+            # Check if the person is an employee EMPLOYEEE FAVORITES THEN NEEDS TO HAVE POST TO EDII/ADD VEHICLES ALSO
+            cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            cur1.execute('SELECT * FROM employee_login WHERE username = %s',(username6,))
+            employeelogin = cur1.fetchone()
+            if session['username'] = employee_login['username']:
+               EmployeeID = employee_login['employee_id']
+               isEmployee = true
+               msg = ''
+               cursor = mysql.connection.cursor()
+               cursor.execute('SELECT * FROM favorites WHERE id = % ', (EmployeeID,))
+               data = cursor.fetchall()          
+               if data:
+                  numRows = cursor.rowcount
+                  return render_template('favorites.html',homepageusername = username6, msg = msg, data=data)
+             
+     
+     
+     
+     
+     
+        
      else:
         return render_template('SignUp.html')
+
+
+
+
+
+
+
+
      
 
 
