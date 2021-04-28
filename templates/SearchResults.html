@@ -268,19 +268,19 @@
     </thead>    
     <tbody>
      {% for row in data %}    
-            <tr>
-                <a href="camry"><td>{{row[0]}}</td></a>
-                <a href="camry"><td>{{row[1]}}</td></a>
-                <a href="camry"><td>{{row[2]}}</td></a>
-		<a href="camry"><td>{{row[3]}}</td></a>
-		<a href="camry"><td>{{row[4]}}</td></a>
-		<a href="camry"><td>{{row[5]}}</td></a>
-		<a href="camry"><td>{{row[6]}}</td></a>
-		<a href="camry"><td>{{row[7]}}</td></a>
-		<a href="camry"><td>{{row[9]}}</td></a>
-		<a href="camry"><td>{{row[8]}}</td></a>
-		<a href="camry"><td>{{row[9]}}</td></a>
-		<a href="camry"><td class = "imageBox"><img src="{{row[10]}}" alt="Vehicle Image" class = "vehicleImage"></td></a>
+            <tr class='clickable-row' data-href='{{row[0]'>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+		<td>{{row[3]}}</td>
+		<td>{{row[4]}}</td>
+		<td>{{row[5]}}</td>
+		<td>{{row[6]}}</td>
+		<td>{{row[7]}}</td>
+		<td>{{row[9]}}</td>
+		<td>{{row[8]}}</td>
+		<td>{{row[9]}}</td>
+		<td class = "imageBox"><img src="{{row[10]}}" alt="Vehicle Image" class = "vehicleImage"></td>
 				
             </tr>
         {% endfor %}
