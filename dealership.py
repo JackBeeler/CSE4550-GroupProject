@@ -106,25 +106,25 @@ def login():
 
 @app.route('/homepageloggedIn', methods=['GET','POST'])
 def homepagelogged():
-  if 'username'  in session:
+   if 'username'  in session:
          username2 = session['username']
-  else:
-         if request.method == 'POST' and 'search' in request.form:
-          Search = request.form['search']
-          cursor = mysql.connection.cursor()
-          cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s OR year like %s', (Search, Search, Search, Search,))
-          data1= cursor.fetchall()
-          numRows = cursor.rowcount
-          print(data1)
+     
+   if request.method == 'POST' and 'search' in request.form:
+         Search = request.form['search']
+         cursor = mysql.connection.cursor()
+         cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s OR year like %s', (Search, Search, Search, Search,))
+         data1= cursor.fetchall()
+         numRows = cursor.rowcount
+         print(data1)
           
-          if data1:
-               return render_template('SearchResults.html',  data=data1, numRows=numRows)
+         if data1:
+              return render_template('SearchResults.html',  data=data1, numRows=numRows)
     
-    
-  if 'username' in session:
+     
+     if 'username' in session:
          username2 = session['username']
          return render_template('homepageLoggedIn.html', homepageusername = username2)
-  else:
+     else:
          return render_template('homepage.html')
 
 
