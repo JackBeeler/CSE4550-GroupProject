@@ -106,7 +106,7 @@ def login():
             session['loggedin'] = True
             session['employee_id'] = employeelogin['employee_id']
             session['username'] = employeelogin['username']
-            return render_template('homepagelogged', msg=msg)
+            return render_template('homepageLoggedIn.html', msg=msg)
         else: 
             msg = "Wrong username/password"
     return render_template('LogIn.html', msg=msg)
