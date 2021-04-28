@@ -124,9 +124,8 @@ def homepagelogged():
                cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s OR year like %s', (Search, Search, Search, Search,))
                data1= cursor.fetchall()
                numRows = cursor.rowcount
-          
-         if data1:
-              return render_template('SearchResults.html',  data=data1, numRows=numRows)
+               if data1:
+                    return render_template('SearchResults.html',  data=data1, numRows=numRows, homepageusername = username2 )
     
      
    if 'username' in session:
