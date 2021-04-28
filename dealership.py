@@ -100,16 +100,16 @@ def login():
             # Check if the person is an employee trying to log in
            # msg = 'Wrong username/password'
            cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cur1.execute('SELECT * FROM employee_login WHERE username = %s and password = %s', (username, password,))
-        employeelogin = cur1.fetchone()
-        if employeelogin:
+           cur1.execute('SELECT * FROM employee_login WHERE username = %s and password = %s', (username, password,))
+           employeelogin = cur1.fetchone()
+           if employeelogin:
             session['loggedin'] = True
             session['employee_id'] = employeelogin['employee_id']
             session['username'] = employeelogin['username']
             redirect(url_for('homepagelogged', msg=msg, data = data)
-        else: 
+           else: 
             msg = "Wrong username/password"
-    return render_template('LogIn.html', msg=msg)
+            return render_template('LogIn.html', msg=msg)
 
 
 
