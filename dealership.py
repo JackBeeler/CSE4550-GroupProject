@@ -941,8 +941,8 @@ def favorites():
             # Check if the person is an employee EMPLOYEEE FAVORITES THEN NEEDS TO HAVE POST TO EDII/ADD VEHICLES ALSO
             cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
             cur1.execute('SELECT * FROM employee_login WHERE username = %s',(username6,))
-            employeelogin = cur1.fetchone()
-            if employeelogin:
+            employee_login = cur1.fetchone()
+            if employee_login:
                EmployeeID = employee_login['employee_id']
                isEmployee = true
                msg = ''
