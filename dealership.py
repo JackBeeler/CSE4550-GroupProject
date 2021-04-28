@@ -95,7 +95,7 @@ def login():
             session['customer_id'] = customer_login['customer_id']
             session['username'] = customer_login['username']
             msg = 'Success'
-            return render_template('homepageLoggedIn.html', msg = msg)
+            return redirect(url_for('homepagelogged', msg=msg)
         else:
             # Check if the person is an employee trying to log in
            # msg = 'Wrong username/password'
@@ -106,7 +106,7 @@ def login():
             session['loggedin'] = True
             session['employee_id'] = employeelogin['employee_id']
             session['username'] = employeelogin['username']
-            return redirect(url_for('homepagelogged'))
+            return redirect(url_for('homepagelogged', msg=msg))
         else: 
             msg = "Wrong username/password"
     return render_template('LogIn.html', msg=msg)
@@ -118,15 +118,27 @@ def login():
 def homepagelogged():
    if 'username'  in session:
          username2 = session['username']
+     
          if request.method == 'POST' and 'search' in request.form:
-               Search = request.form['search']
-               cursor = mysql.connection.cursor()
-               cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s OR year like %s', (Search, Search, Search, Search,))
-               data1= cursor.fetchall()
-               numRows = cursor.rowcount
+          Search = request.form['search']
+          cursor = mysql.connection.cursor()
+          cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s OR year like %s', (Search, Search, Search, Search,))
+          data1= cursor.fetchall()
+          numRows = cursor.rowcount
           
-         if data1:
-              return render_template('SearchResults.html',  data=data1, numRows=numRows)
+          if data1:
+               return render_template('SearchResults.html',  data=data1, numRows=numRows, homepageusername = username2)
+     else:
+          if request.method == 'POST' and 'search' in request.form:
+           Search = request.form['search']
+           cursor = mysql.connection.cursor()
+           cursor.execute('SELECT * FROM inventory WHERE make like %s OR model like %s OR color like %s OR year like %s', (Search, Search, Search, Search,))
+           data1= cursor.fetchall()
+           numRows = cursor.rowcount
+          
+          
+           if data1:
+               return render_template('SearchResults.html',  data=data1, numRows=numRows)
     
      
    if 'username' in session:
