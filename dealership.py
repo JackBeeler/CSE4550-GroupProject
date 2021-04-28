@@ -104,7 +104,7 @@ def login():
 
 
 
-@app.route('/homepageloggedIn')
+@app.route('/homepageloggedIn', methods=['GET','POST']))
 def homepagelogged():
   if 'username'  in session:
          username2 = session['username']
