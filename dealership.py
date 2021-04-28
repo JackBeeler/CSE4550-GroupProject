@@ -36,7 +36,7 @@ def homepage():
           if data1:
                return render_template('SearchResults.html',  data=data1, numRows=numRows)
     
-    
+     
      if 'username' in session:
          username2 = session['username']
          return render_template('homepageLoggedIn.html', homepageusername = username2)
