@@ -121,10 +121,10 @@ def homepagelogged():
                return render_template('SearchResults.html',  data=data1, numRows=numRows)
     
     
-     if 'username' in session:
+  if 'username' in session:
          username2 = session['username']
          return render_template('homepageLoggedIn.html', homepageusername = username2)
-     else:
+  else:
          return render_template('homepage.html')
 
 
