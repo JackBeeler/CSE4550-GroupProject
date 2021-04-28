@@ -109,7 +109,7 @@ def login():
              redirect(url_for('homepagelogged', msg=msg, data = data))
             else: 
              msg = "Wrong username/password"
-            return render_template('LogIn.html', msg=msg)
+    return render_template('LogIn.html', msg=msg)
 
 
 
