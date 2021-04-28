@@ -927,7 +927,7 @@ def favorites():
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur.execute('SELECT * FROM customer_login WHERE username = %s', (username6,))
         customer_login = cur.fetchone()
-        if session['username'] == customer_login['username']:
+        if customer_login:
             CustomerID = customer_login['customer_id']
             isUser = true
             msg = ''
@@ -942,7 +942,7 @@ def favorites():
             cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
             cur1.execute('SELECT * FROM employee_login WHERE username = %s',(username6,))
             employeelogin = cur1.fetchone()
-            if session['username'] == employee_login['username']:
+            if employeelogin:
                EmployeeID = employee_login['employee_id']
                isEmployee = true
                msg = ''
