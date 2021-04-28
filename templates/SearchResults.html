@@ -13,12 +13,6 @@
 	<link href="static/css/SearchResults.css" rel="stylesheet" type="text/css">
 	<link href="SearchResults.css" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-		
-	jQuery(document).ready(function($) {
-    $(".clickable-row").click(function() {
-        window.location = $(this).data("href");
-    });
-});
 	</script>
  
 </head>
@@ -275,8 +269,8 @@
     </thead>    
     <tbody>
      {% for row in data %}    
-            <tr class='clickable-row' data-href='{{row[0]}}'>
-                <td>{{row[0]}}</td>
+            <tr>
+                <td><a href="{{row[0]}}">{{row[0]}}</a></td>
                 <td>{{row[1]}}</td>
                 <td>{{row[2]}}</td>
 		<td>{{row[3]}}</td>
