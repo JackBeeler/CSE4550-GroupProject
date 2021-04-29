@@ -932,7 +932,7 @@ def favorites():
             isUser = "true"
             msg = ''
             cursor = mysql.connection.cursor()
-            cursor.execute('SELECT * FROM jackfavorites WHERE id = % ', (CustomerID,))
+            cursor.execute('SELECT * FROM jackfavorites WHERE id = %s ', (CustomerID,))
             data = cursor.fetchall()
             if data:
                numRows = cursor.rowcount
