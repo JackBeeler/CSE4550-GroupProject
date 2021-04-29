@@ -953,7 +953,7 @@ def favorites():
                if data:
                   numRows = cursor.rowcount
                   return render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows=numRows)
-        elif: 
+        elif: not data
             msg = "You do not have any favorites"
             return render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows=0)
      
