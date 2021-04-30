@@ -1342,7 +1342,6 @@ def favorites():
         customer_login = cur.fetchone()
         if customer_login:
             CustomerID = customer_login['customer_id']
-            isUser = "true"
             msg = ''
             cursor = mysql.connection.cursor()
             cursor.execute('SELECT * FROM jackfavorites WHERE id = %s ', (CustomerID,))
@@ -1361,7 +1360,6 @@ def favorites():
             employee_login = cur1.fetchone()
             if employee_login:
                EmployeeID = employee_login['employee_id']
-               isEmployee = "true"
                msg = ''
                cursor = mysql.connection.cursor()
                cursor.execute('SELECT * FROM jackfavorites WHERE id = %s ', (EmployeeID,))
