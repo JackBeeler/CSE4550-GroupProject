@@ -179,7 +179,7 @@ def searchresults1000001():
 
     if 'username' in session:  
         username5 = session['username'] 
-        if request.cookies.get('isuser') == True:
+        if request.cookies.get('isUser') == True:
           return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
         elif request.cookies.get('isEmployee') == True:
           return redirect('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
