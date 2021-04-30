@@ -135,6 +135,7 @@ def homepagelogged():
          return render_template('homepage.html')
 
 
+
 @app.route('/logout')
 def logout():
     session.pop('loggedin', None)
