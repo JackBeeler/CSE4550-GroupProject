@@ -94,7 +94,7 @@ def login():
             session['loggedin'] = True
             session['customer_id'] = customer_login['customer_id']
             session['username'] = customer_login['username']
-            session['isUser'] = 'true'
+            session['isUser'] = True
             msg = 'Success'
             return redirect(url_for('homepagelogged', msg=msg,))
         else:
@@ -107,7 +107,7 @@ def login():
              session['loggedin'] = True
              session['employee_id'] = employeelogin['employee_id']
              session['username'] = employeelogin['username']
-             session['isEmployee'] = 'true'
+             session['isEmployee'] = True
              
              return redirect(url_for('homepagelogged', msg=msg,))
             else: 
