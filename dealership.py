@@ -143,7 +143,11 @@ def homepagelogged():
 def logout():
     session.pop('loggedin', None)
     session.pop('customer_id', None)
-    session.pop('username', None)   
+    session.pop('username', None)
+    if 'isUser' in session
+          session.pop('isUser', None)
+    elif 'isEmployee' in session
+          session.pop('isEmployee', None)
     return redirect(url_for('login'))
 
 #contact
