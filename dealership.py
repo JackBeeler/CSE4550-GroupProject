@@ -94,7 +94,9 @@ def login():
             session['loggedin'] = True
             session['customer_id'] = customer_login['customer_id']
             session['username'] = customer_login['username']
-            session['isEmployee'] = True
+            isEmployee = True
+            resp = make_response("Setting a cookie") 
+            resp.set_cookie('isEmployee', isEmployee)
             msg = 'Success'
             return redirect(url_for('homepagelogged', msg=msg,))
         else:
@@ -107,7 +109,9 @@ def login():
              session['loggedin'] = True
              session['employee_id'] = employeelogin['employee_id']
              session['username'] = employeelogin['username']
-             session['isUser'] = True
+             isUser = True
+             resp = make_response("Setting a cookie")  
+             resp.set_cookie('isUser', isUser)
              return redirect(url_for('homepagelogged', msg=msg))
             else: 
              msg = "Wrong username/password"
