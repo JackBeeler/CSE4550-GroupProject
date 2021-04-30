@@ -161,7 +161,458 @@ def about():
     else:
         return render_template('about.html')
         
-        
+ #BELOW THIS LIME IS THE LINKING TO EACH VEHICLE'S INDIVIDUAL LISTING PAGE 
+
+@app.route('/1000001')
+def searchresults1000001():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+     
+     
+@app.route('/1000002')
+def searchresults1000001():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000002"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)     
+     
+@app.route('/1000003')
+def searchresults1000003():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000003"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+     
+@app.route('/1000004')
+def searchresults1000004():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000004"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000005')
+def searchresults1000005():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000005"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000006')
+def searchresults1000006():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000006"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000007')
+def searchresults1000007():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000007"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000008')
+def searchresults1000008():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000008"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000009')
+def searchresults1000009():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000009"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000010')
+def searchresults1000010():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000010"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000011')
+def searchresults1000011():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000011"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000012')
+def searchresults1000012():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000012"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000013')
+def searchresults1000013():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000013"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000014')
+def searchresults1000014():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000014"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000015')
+def searchresults1000015():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000015"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000016')
+def searchresults1000016():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000016"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000017')
+def searchresults1000017():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000017"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000018')
+def searchresults1000018():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000018"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000019')
+def searchresults1000019():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000019"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000020')
+def searchresults1000020():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000020"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000021')
+def searchresults1000021():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000021"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000022')
+def searchresults1000022():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000022"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000023')
+def searchresults1000023():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000023"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000024')
+def searchresults1000024():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000024"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000025')
+def searchresults1000025():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000025"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000023')
+def searchresults1000023():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000023"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000024')
+def searchresults1000024():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000024"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000025')
+def searchresults1000025():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000025"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000026')
+def searchresults1000026():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000026"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000027')
+def searchresults1000027():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000027"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000028')
+def searchresults1000028():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000028"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+@app.route('/1000029')
+def searchresults1000029():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000029"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+
+@app.route('/1000030')
+def searchresults1000030():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000030"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)
+
+     
+#ABOVE THIS LINE IS THE LINKING TO EACH VECHICLE'S INDIVIDUAL LISTING PAGE     
 @app.route('/hatchbacks')
 def searchresultshatchbacks():
     cursor = mysql.connection.cursor()
