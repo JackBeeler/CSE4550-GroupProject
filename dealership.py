@@ -179,9 +179,9 @@ def searchresults1000001():
 
     if 'username' in session:  
         username5 = session['username'] 
-        if session['isUser'] == True:
+        if request.cookies.get('isuser') == True:
           return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
-        elif session['isEmployee'] == True:
+        elif request.cookies.get('isEmployee') == True:
           return redirect('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
