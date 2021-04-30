@@ -94,6 +94,7 @@ def login():
             session['loggedin'] = True
             session['customer_id'] = customer_login['customer_id']
             session['username'] = customer_login['username']
+            isEmployee = True
             msg = 'Success'
             return redirect(url_for('homepagelogged', msg=msg,))
         else:
@@ -106,6 +107,7 @@ def login():
              session['loggedin'] = True
              session['employee_id'] = employeelogin['employee_id']
              session['username'] = employeelogin['username']
+             isUser = True
              return redirect(url_for('homepagelogged', msg=msg))
             else: 
              msg = "Wrong username/password"
@@ -173,7 +175,10 @@ def searchresults1000001():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if isUser == True:
+          return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        elif isEmployee == True:
+          return redirect('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
      
