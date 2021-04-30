@@ -94,11 +94,11 @@ def login():
             session['loggedin'] = True
             session['customer_id'] = customer_login['customer_id']
             session['username'] = customer_login['username']
-            isEmployee = True
-            
-            set_cookie('isEmployee', isEmployee)
+            res = make_response("Setting a cookie")
+            isUser = True
+            res.set_cookie('isUser', isUser)
             msg = 'Success'
-            return redirect(url_for('homepagelogged', msg=msg,))
+            return res(redirect(url_for('homepagelogged', msg=msg,)))
         else:
             # Check if the person is an employee trying to log in
            # msg = 'Wrong username/password'
@@ -109,10 +109,10 @@ def login():
              session['loggedin'] = True
              session['employee_id'] = employeelogin['employee_id']
              session['username'] = employeelogin['username']
-             isUser = True
-             
+             isEmployee = True
              resp.set_cookie('isUser', isUser)
-             return redirect(url_for('homepagelogged', msg=msg))
+             resp.set_cookie('isEmployee', isEmployee)
+             return res(redirect(url_for('homepagelogged', msg=msg)))
             else: 
              msg = "Wrong username/password"
     return render_template('LogIn.html', msg=msg)
