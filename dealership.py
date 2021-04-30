@@ -173,9 +173,9 @@ def searchresults1000001():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
      
      
 @app.route('/1000002')
@@ -187,9 +187,9 @@ def searchresults1000002():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)     
+        return render_template('VehicleListing.html', data=data, numRows=numRows)     
      
 @app.route('/1000003')
 def searchresults1000003():
@@ -200,9 +200,9 @@ def searchresults1000003():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
      
 @app.route('/1000004')
 def searchresults1000004():
@@ -213,9 +213,9 @@ def searchresults1000004():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000005')
@@ -227,9 +227,9 @@ def searchresults1000005():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000006')
@@ -241,9 +241,9 @@ def searchresults1000006():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000007')
@@ -255,9 +255,9 @@ def searchresults1000007():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000008')
@@ -269,9 +269,9 @@ def searchresults1000008():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000009')
@@ -283,9 +283,9 @@ def searchresults1000009():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000010')
@@ -297,9 +297,9 @@ def searchresults1000010():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000011')
 def searchresults1000011():
@@ -310,9 +310,9 @@ def searchresults1000011():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000012')
@@ -324,9 +324,9 @@ def searchresults1000012():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000013')
@@ -338,9 +338,9 @@ def searchresults1000013():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000014')
@@ -352,9 +352,9 @@ def searchresults1000014():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000015')
@@ -366,9 +366,9 @@ def searchresults1000015():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000016')
 def searchresults1000016():
@@ -379,9 +379,9 @@ def searchresults1000016():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000017')
 def searchresults1000017():
@@ -392,9 +392,9 @@ def searchresults1000017():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000018')
@@ -406,9 +406,9 @@ def searchresults1000018():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000019')
 def searchresults1000019():
@@ -419,9 +419,9 @@ def searchresults1000019():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000020')
@@ -433,9 +433,9 @@ def searchresults1000020():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000021')
@@ -447,9 +447,9 @@ def searchresults1000021():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000022')
@@ -461,9 +461,9 @@ def searchresults1000022():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000023')
 def searchresults1000023():
@@ -474,9 +474,9 @@ def searchresults1000023():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000024')
 def searchresults1000024():
@@ -487,9 +487,9 @@ def searchresults1000024():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000025')
@@ -501,9 +501,9 @@ def searchresults1000025():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000026')
 def searchresults1000026():
@@ -514,9 +514,9 @@ def searchresults1000026():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000027')
@@ -528,9 +528,9 @@ def searchresults1000027():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000028')
@@ -542,9 +542,9 @@ def searchresults1000028():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000029')
 def searchresults1000029():
@@ -555,9 +555,9 @@ def searchresults1000029():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000030')
@@ -569,9 +569,9 @@ def searchresults1000030():
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
 
      
 #ABOVE THIS LINE IS THE LINKING TO EACH VECHICLE'S INDIVIDUAL LISTING PAGE     
