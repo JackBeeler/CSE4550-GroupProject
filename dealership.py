@@ -176,9 +176,9 @@ def searchresults1000001():
 
     if 'username' in session:  
         username5 = session['username'] 
-        if session['isUser'] == 'True':
+        if session['isUser'] == 'true':
           return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
-        elif session['isEmployee'] == 'True':
+        elif session['isEmployee'] == 'true':
           return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
