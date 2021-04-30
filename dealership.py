@@ -94,11 +94,9 @@ def login():
             session['loggedin'] = True
             session['customer_id'] = customer_login['customer_id']
             session['username'] = customer_login['username']
-            res = make_response(redirect(url_for('homepagelogged', msg=msg,)))
-            isUser = True
-            res.set_cookie('isUser', isUser)
+            session['isUser'] = 'true'
             msg = 'Success'
-            return res
+            return redirect(url_for('homepagelogged', msg=msg,)))
         else:
             # Check if the person is an employee trying to log in
            # msg = 'Wrong username/password'
@@ -109,10 +107,9 @@ def login():
              session['loggedin'] = True
              session['employee_id'] = employeelogin['employee_id']
              session['username'] = employeelogin['username']
-             resp = make_response(redirect(url_for('homepagelogged', msg=msg,)))
-             isEmployee = True
-             resp.set_cookie('isEmployee', isEmployee)
-             return resp
+             session['isEmployee'] = 'true'
+             
+             return redirect(url_for('homepagelogged', msg=msg,)))
             else: 
              msg = "Wrong username/password"
     return render_template('LogIn.html', msg=msg)
@@ -179,10 +176,10 @@ def searchresults1000001():
 
     if 'username' in session:  
         username5 = session['username'] 
-        if request.cookies.get('isUser') == True:
+        if session['isUser'] == 'True':
           return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
-        elif request.cookies.get('isEmployee') == True:
-          return redirect('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        elif session['isEmployee'] == 'True':
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
      
