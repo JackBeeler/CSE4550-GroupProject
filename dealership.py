@@ -1417,7 +1417,7 @@ def deleteVehicleListing():
           
         return redirect('SearchResults.html',homepageusername = username6)
     else:
-        return redirect('SearchResults.html',homepageusername = username6)
+        return redirect('SearchResults.html')
      
     
 
