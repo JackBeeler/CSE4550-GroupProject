@@ -174,7 +174,7 @@ def about():
 
 @app.route('/1000001')
 def searchresults1000001():
-    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
     data = cursor.fetchone()
     numRows = cursor.rowcount
