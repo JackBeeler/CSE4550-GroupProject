@@ -1373,6 +1373,11 @@ def employeeVehicleListingEditPage():
         transmission1 = dataDict['transmission']
         body_style1 = dataDict['body_style']
         car_photo1 = dataDict['car_photo']
+     
+      cursor = mysql.connection.cursor()
+        cursor.execute('SELECT * FROM inventory  WHERE vin = %s', (editingVehicleVin,))
+        data = cursor.fetchall()
+        numRows = cursor.rowcount  
           
        
          
@@ -1384,7 +1389,7 @@ def employeeVehicleListingEditPage():
                       
         return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, dataDict=dataDict,vin1=vin1,make1=make1,model1=model1,year1=year1,color1=color1,mileage1=mileage1,price1=price1,our_price1=our_price1,transmission1=transmission1,body_style1=body_style1,car_photo1=car_photo1)
     else:
-        return render_template('employeeVehicleListingEditPage.html')
+        return render_template('employeeVehicleListingEditPage.html', data=data, numRows=numRows)
             
      
     
