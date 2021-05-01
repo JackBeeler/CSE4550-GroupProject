@@ -1406,15 +1406,17 @@ def employeeVehicleListingEditPage():
 def deleteVehicleListing():
     if 'username' in session:  
         username6 = session['username'] 
+        editingVehicleVin = session.get('editingVehicleVin', None)
+        cursor.execute('DELETE FROM inventory WHERE vin = %s',(editingVehicleVin,))
+        mysql.connection.commit()
+         
           
           
           
           
-          
-          
-        return render_template('employeeVehicleListingEditPage.html', homepageusername = username6)
+        return redirect(url_for('searchresults.html',homepageusername = username6))
     else:
-        return render_template('employeeVehicleListingEditPage.html')
+        return redirect(url_for('searchresults.html',homepageusername = username6))
      
     
 
