@@ -1363,19 +1363,30 @@ def addToFavorites():
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
         dataDict = cursorDict.fetchone()
-        for row in dataDict:
-          vin1 = row[0]
-          make1 = row[1]
-          model1 = row[2]
-          year1 = row[3]
-          color1 = row[4]
-          mileage1 = row[5]
-          price1 = row[6]
-          our_price1 = row[7]
-          transmission1 = row[8]
-          body_style1 = row[9]
-          car_photo1 = row[10]
+        session['vin'] = dataDict['vin']
+        session['make'] = dataDict['make']
+        session['model'] = dataDict['model']
+        session['year'] = dataDict['year']
+        session['color'] = dataDict['color']
+        session['mileage'] = dataDict['mileage']
+        session['price'] = dataDict['price']
+        session['our_price'] = dataDict['our_price']
+        session['transmission'] = dataDict['transmission']
+        session['body_style'] = dataDict['body_style']
+        session['car_photo'] = dataDict['car_photo']
         
+        vin1 = session['vin'] 
+        make1 = session['make']
+        model1 = session['model']
+        year1 = session['year']
+        color1 = session['color']
+        mileage1 = session['mileage']
+        price1 = session['price']
+        our_price1 = session['our_price']
+        transmission1 = session['transmission']
+        body_style1 = session['body_style']
+        car_photo1 = session['car_photo']
+     
         cursor2 = mysql.connection.cursor()
         cursor2.execute('INSERT INTO jackfavorites VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', (vin1, make1, model1, year1, color1, mileage1, price1, our_price1, transmission1, body_style1,car_photo1, UserID,))
         mysql.connection.commit()
