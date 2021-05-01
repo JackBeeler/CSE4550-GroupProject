@@ -147,6 +147,7 @@ def logout():
     if 'isUser' in session:
           session.pop('isUser', None)
     elif 'isEmployee' in session:
+          session.pop('editingVehicleVin', None)
           session.pop('isEmployee', None)
     return redirect(url_for('login'))
 
@@ -183,6 +184,7 @@ def searchresults1000001():
         if 'isUser' in session:
           return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
         elif 'isEmployee' in session:
+          session['editingVehicleVin'] = data['vin']
           return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
@@ -1339,6 +1341,40 @@ def vehiclelisting():
         return render_template('VehicleListing.html',homepageusername = username6)
     else:
         return render_template('VehicleListing.html')
+
+
+
+
+
+
+
+
+
+
+@app.route('/employeeVehicleListingEditPage', methods=['GET', 'POST'])
+def employeeVehicleListingEditPage():
+    if 'username' in session:  
+        username6 = session['username']
+        editingVehicleVin = session.get('editingVehicleVin', None)
+        cursor = mysql.connection.cursor()
+        cursor.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin)
+        data = cursor.fetchall()
+        numRows = cursor.rowcount
+        vin = data['vin']
+        make = data['make']
+        model = data['model']
+        year = data['year']
+        color = data['color']
+        mileage = data['mileage']
+        price = data['price']
+        our_price = data['our_price']
+        transmission = data['transmission']
+        body_style = data['body_style']
+        car_photo = data['car_photo']
+                      
+        return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, data=data, numRows=numRows,vin=vin,make=make,model=model,year=year,color=color,mileage=mileage,price=price,our_price=our_price,transmission=transmission,body_style=body_style,car_photo=car_photo)
+    else:
+        return render_template('employeeVehicleListingEditPage.html', data=data, numRows=numRows)
             
      
     
