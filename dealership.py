@@ -1341,13 +1341,48 @@ def searchresults():
 @app.route('/vehiclelisting')
 def vehiclelisting():
     if 'username' in session:  
-        username6 = session['username'] 
+        username6 = session['username']
+        
+     
+        
         return render_template('VehicleListing.html',homepageusername = username6)
     else:
         return render_template('VehicleListing.html')
 
 
-
+@app.route('/addToFavorites')
+def addToFavorites():
+    if 'username' in session:  
+        username6 = session['username']
+        editingVehicleVin = session.get('editingVehicleVin', None)
+     
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
+        UserID = cursor.fetchall()
+         
+        cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
+        dataDict = cursorDict.fetchone()
+        vin1 = dataDict['vin']
+        make1 = dataDict['make']
+        model1 = dataDict['model']
+        year1 = dataDict['year']
+        color1 = dataDict['color']
+        mileage1 = dataDict['mileage']
+        price1 = dataDict['price']
+        our_price1 = dataDict['our_price']
+        transmission1 = dataDict['transmission']
+        body_style1 = dataDict['body_style']
+        car_photo1 = dataDict['car_photo']
+        
+        cursor2 = mysql.connection.cursor()
+        cursor2.execute('INSERT INTO jackfavorites VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', (vin1, make1, model1, year1, color1, mileage1, price1, our_price1, transmission1, body_style1,car_photo1, UserID,))
+        mysql.connection.commit()
+          
+          
+        return render_template('VehicleListingLoggedIn.html',)
+    else:
+        return render_template('VehicleListing.html')
 
 
 
