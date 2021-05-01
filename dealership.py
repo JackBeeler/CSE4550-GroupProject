@@ -1364,7 +1364,7 @@ def addToFavorites():
         UserID = cursor.fetchone() 
          
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (CurrentFavoritesVin,))
+        cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
         dataDict = cursorDict.fetchone()
         vin1 = dataDict['vin']
         make1 = dataDict['make']
