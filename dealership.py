@@ -1381,9 +1381,9 @@ def addToFavorites():
           mysql.connection.commit()
           
           
-        return
+        return redirect(url_for('favorites'))
     else:
-        return 
+        return redirect(url_for('favorites'))
 
 
 
