@@ -1374,7 +1374,7 @@ def employeeVehicleListingEditPage():
         body_style1 = dataDict['body_style']
         car_photo1 = dataDict['car_photo']
      
-      cursor = mysql.connection.cursor()
+        cursor = mysql.connection.cursor()
         cursor.execute('SELECT * FROM inventory  WHERE vin = %s', (editingVehicleVin,))
         data = cursor.fetchall()
         numRows = cursor.rowcount  
