@@ -1358,7 +1358,8 @@ def addToFavorites():
      
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
-        UserID = cursor.fetchone()
+        Data = cursor.fetchone()
+        UserID = Data['customer_id']
          
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
@@ -1380,7 +1381,7 @@ def addToFavorites():
         mysql.connection.commit()
           
           
-        return render_template('VehicleListingLoggedIn.html', vin1=vin1, make1=make1, model1=model1, year1=year1, color1 = color1, mileage1 = mileage1, price1-price1, our_price1=our_price1, transmission1=transmission1, body_style1=body_style1, car_photo1=car_photo1)
+        return render_template('VehicleListingLoggedIn.html', vin1=vin1, make1=make1, model1=model1, year1=year1, color1 = color1, mileage1 = mileage1, price1-price1, our_price1=our_price1, transmission1=transmission1, body_style1=body_style1, car_photo1=car_photo1, UserID = UserID)
     else:
         return render_template('VehicleListing.html')
 
