@@ -1414,9 +1414,9 @@ def deleteVehicleListing():
           
           
           
-        return redirect(url_for('searchresults.html',homepageusername = username6))
+        return redirect(url_for('SearchResults.html',homepageusername = username6))
     else:
-        return redirect(url_for('searchresults.html',homepageusername = username6))
+        return redirect(url_for('SearchResults.html',homepageusername = username6))
      
     
 
