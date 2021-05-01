@@ -1381,9 +1381,9 @@ def addToFavorites():
           mysql.connection.commit()
           
           
-        return render_template('VehicleListingLoggedIn.html',)
+        return
     else:
-        return render_template('VehicleListing.html')
+        return 
 
 
 
