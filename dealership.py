@@ -176,7 +176,7 @@ def about():
 def searchresults1000001():
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
-    data = cursor.fetchall()
+    data = cursor.fetchone()
     numRows = cursor.rowcount
 
     if 'username' in session:  
@@ -1371,6 +1371,9 @@ def employeeVehicleListingEditPage():
         transmission = data['transmission']
         body_style = data['body_style']
         car_photo = data['car_photo']
+         
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        
                       
         return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, data=data, numRows=numRows,vin=vin,make=make,model=model,year=year,color=color,mileage=mileage,price=price,our_price=our_price,transmission=transmission,body_style=body_style,car_photo=car_photo)
     else:
