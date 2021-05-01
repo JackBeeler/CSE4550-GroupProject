@@ -1356,43 +1356,31 @@ def addToFavorites():
         username6 = session['username']
         editingVehicleVin = session.get('editingVehicleVin', None)
      
-        
-        UserID = session['customer_id']
-     
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
+        UserID = cursor.fetchone()
          
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
         dataDict = cursorDict.fetchone()
-        session['vin'] = dataDict['vin']
-        session['make'] = dataDict['make']
-        session['model'] = dataDict['model']
-        session['year'] = dataDict['year']
-        session['color'] = dataDict['color']
-        session['mileage'] = dataDict['mileage']
-        session['price'] = dataDict['price']
-        session['our_price'] = dataDict['our_price']
-        session['transmission'] = dataDict['transmission']
-        session['body_style'] = dataDict['body_style']
-        session['car_photo'] = dataDict['car_photo']
+        vin1 = dataDict['vin']
+        make1 = dataDict['make']
+        model1 = dataDict['model']
+        year1 = dataDict['year']
+        color1 = dataDict['color']
+        mileage1 = dataDict['mileage']
+        price1 = dataDict['price']
+        our_price1 = dataDict['our_price']
+        transmission1 = dataDict['transmission']
+        body_style1 = dataDict['body_style']
+        car_photo1 = dataDict['car_photo']
         
-        vin1 = session['vin'] 
-        make1 = session['make']
-        model1 = session['model']
-        year1 = session['year']
-        color1 = session['color']
-        mileage1 = session['mileage']
-        price1 = session['price']
-        our_price1 = session['our_price']
-        transmission1 = session['transmission']
-        body_style1 = session['body_style']
-        car_photo1 = session['car_photo']
-     
         cursor2 = mysql.connection.cursor()
         cursor2.execute('INSERT INTO jackfavorites VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', (vin1, make1, model1, year1, color1, mileage1, price1, our_price1, transmission1, body_style1,car_photo1, UserID,))
         mysql.connection.commit()
           
           
-        return render_template('VehicleListingLoggedIn.html')
+        return render_template('VehicleListingLoggedIn.html',)
     else:
         return render_template('VehicleListing.html')
 
