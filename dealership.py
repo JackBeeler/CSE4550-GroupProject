@@ -1359,10 +1359,9 @@ def employeeVehicleListingEditPage():
     if 'username' in session:  
         username6 = session['username']
         editingVehicleVin = session.get('editingVehicleVin', None)
-        cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
-        data = cursor.fetchall()
-        numRows = cursor.rowcount
+        cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
+        dataDict = cursorDict.fetchall()
         vin = data['vin']
         make = data['make']
         model = data['model']
@@ -1374,11 +1373,16 @@ def employeeVehicleListingEditPage():
         transmission = data['transmission']
         body_style = data['body_style']
         car_photo = data['car_photo']
+          
+        cursor = mysql.connection.cursor()
+        cursor.execute('SELECT * FROM inventory  WHERE vin = %s', (editingVehicleVin,))
+        data = cursor.fetchall()
+        numRows = cursor.rowcount  
          
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         
                       
-        return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, data=data, numRows=numRows,vin=vin,make=make,model=model,year=year,color=color,mileage=mileage,price=price,our_price=our_price,transmission=transmission,body_style=body_style,car_photo=car_photo)
+        return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, dataDict=dataDict, numRows=numRows,vin=vin,make=make,model=model,year=year,color=color,mileage=mileage,price=price,our_price=our_price,transmission=transmission,body_style=body_style,car_photo=car_photo)
     else:
         return render_template('employeeVehicleListingEditPage.html', data=data, numRows=numRows)
             
