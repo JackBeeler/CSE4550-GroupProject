@@ -1367,7 +1367,7 @@ def addToFavorites():
           vin1 = dataDict['vin']
           make1 = dataDict['make']
           model1 = dataDict['model']
-           year1 = dataDict['year']
+          year1 = dataDict['year']
           color1 = dataDict['color']
           mileage1 = dataDict['mileage']
           price1 = dataDict['price']
