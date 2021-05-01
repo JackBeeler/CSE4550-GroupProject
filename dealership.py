@@ -178,7 +178,7 @@ def searchresults1000001():
     cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
-    dataDict = cursorDict.fetchall()
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
