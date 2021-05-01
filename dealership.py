@@ -1402,8 +1402,8 @@ def employeeVehicleListingEditPage():
      
      
      
-@app.route('/deleteVehiclelisting')
-def vehiclelisting():
+@app.route('/deleteVehicleListing')
+def deleteVehicleListing():
     if 'username' in session:  
         username6 = session['username'] 
           
