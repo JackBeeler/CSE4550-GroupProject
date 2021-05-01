@@ -149,7 +149,8 @@ def logout():
     elif 'isEmployee' in session:
           session.pop('editingVehicleVin', None)
           session.pop('isEmployee', None)
-    elif 'editingVehicleVin' in session:
+    elif 'CurrentFavoritesVin' in session:
+          session.pop('CurrentFavoritesVin', None)
           
     return redirect(url_for('login'))
 
