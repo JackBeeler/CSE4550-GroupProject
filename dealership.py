@@ -176,7 +176,7 @@ def about():
 def searchresults1000001():
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
-    data = cursor.fetchall()
+    data = cursor.fetchone()
     numRows = cursor.rowcount
 
     if 'username' in session:  
