@@ -1361,7 +1361,7 @@ def employeeVehicleListingEditPage():
         editingVehicleVin = session.get('editingVehicleVin', None)
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
-        dataDict = cursorDict.fetchall()
+        dataDict = cursorDict.fetchone()
         vin = dataDict['vin']
         make = dataDict['make']
         model = dataDict['model']
