@@ -5,7 +5,7 @@ import MySQLdb.cursors
 import re
 
 app = Flask(__name__)
-
+ 
 app.secret_key = '1234'
 
 # DB configs
