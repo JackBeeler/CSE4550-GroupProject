@@ -1407,6 +1407,7 @@ def deleteVehicleListing():
     if 'username' in session:  
         username6 = session['username'] 
         editingVehicleVin = session.get('editingVehicleVin', None)
+        cursor = mysql.connection.cursor()
         cursor.execute('DELETE FROM inventory WHERE vin = %s',(editingVehicleVin,))
         mysql.connection.commit()
          
