@@ -1399,7 +1399,22 @@ def employeeVehicleListingEditPage():
        return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, data=data, dataDict=dataDict,vin1=vin1,make1=make1,model1=model1,year1=year1,color1=color1,mileage1=mileage1,price1=price1,our_price1=our_price1,transmission1=transmission1,body_style1=body_style1,car_photo1=car_photo1)
     else:
        return render_template('employeeVehicleListingEditPage.html', data=data, numRows=numRows)
-            
+     
+     
+     
+@app.route('/deleteVehiclelisting')
+def vehiclelisting():
+    if 'username' in session:  
+        username6 = session['username'] 
+          
+          
+          
+          
+          
+          
+        return render_template('employeeVehicleListingEditPage.html', homepageusername = username6)
+    else:
+        return render_template('employeeVehicleListingEditPage.html')
      
     
 
