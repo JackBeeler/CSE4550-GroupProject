@@ -1361,7 +1361,8 @@ def addToFavorites():
      
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
-        UserID = cursor.fetchone() 
+        UserIDData = cursor.fetchone()
+        UserID = UserIDData['customer_id']
          
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
