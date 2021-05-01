@@ -185,7 +185,8 @@ def searchresults1000001():
     if 'username' in session:  
         username5 = session['username'] 
         if 'isUser' in session:
-          return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+          
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
         elif 'isEmployee' in session:
           session['editingVehicleVin'] = dataDict['vin']
           return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
