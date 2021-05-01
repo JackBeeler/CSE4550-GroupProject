@@ -1363,7 +1363,7 @@ def addToFavorites():
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
         dataDict = cursorDict.fetchone()
-        for row in dataDict
+        for row in dataDict:
           vin1 = row[0]
           make1 = row[1]
           model1 = row[2]
