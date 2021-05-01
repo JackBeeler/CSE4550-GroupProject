@@ -1381,7 +1381,7 @@ def employeeVehicleListingEditPage():
           
        
          
-    if request.method == 'POST' and 'make' in request.form and 'model' in request.form and 'year' in request.form and 'color' in request.form and 'mileage' in request.form and 'price' in request.form and 'our_price' in request.form and 'transmission' in request.from and 'body_style' in request.form:
+    if request.method == 'POST' and 'make' in request.form  and color in request.form:
        make = request.form['make']
        model = request.form['model']
        year = request.form['year']
