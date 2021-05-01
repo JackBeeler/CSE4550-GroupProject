@@ -175,8 +175,11 @@ def about():
 @app.route('/1000001')
 def searchresults1000001():
     cursor = mysql.connection.cursor()
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000001"')
-    data = cursor.fetchone()
+    dataDict = cursor.fetchall()
+    data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
@@ -184,7 +187,7 @@ def searchresults1000001():
         if 'isUser' in session:
           return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
         elif 'isEmployee' in session:
-          session['editingVehicleVin'] = data['vin']
+          session['editingVehicleVin'] = dataDict['vin']
           return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
