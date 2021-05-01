@@ -1376,7 +1376,7 @@ def addToFavorites():
         car_photo1 = dataDict['car_photo']
         
         cursor2 = mysql.connection.cursor()
-        cursor2.execute('INSERT INTO jackfavorites VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', (vin1, make1, model1, year1, color1, mileage1, price1, our_price1, transmission1, body_style1,car_photo1, UserID,))
+        cursor2.execute('INSERT INTO jackfavorites VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', (vin1, make1, model1, year1, color1, mileage1, price1, our_price1, transmission1, body_style1, car_photo1, UserID))
         mysql.connection.commit()
           
           
