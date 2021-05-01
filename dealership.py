@@ -1356,25 +1356,25 @@ def addToFavorites():
         username6 = session['username']
         editingVehicleVin = session.get('editingVehicleVin', None)
      
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
-        UserID = cursor.fetchone()
+        
+        UserID = session['customer_id']
      
          
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
         dataDict = cursorDict.fetchone()
-        vin1 = row[0]
-        make1 = row[1]
-        model1 = row[2]
-        year1 = row[3]
-        color1 = row[4]
-        mileage1 = row[5]
-        price1 = row[6]
-        our_price1 = row[7]
-        transmission1 = row[8]
-        body_style1 = row[9]
-        car_photo1 = row[10]
+        for row in dataDict
+          vin1 = row[0]
+          make1 = row[1]
+          model1 = row[2]
+          year1 = row[3]
+          color1 = row[4]
+          mileage1 = row[5]
+          price1 = row[6]
+          our_price1 = row[7]
+          transmission1 = row[8]
+          body_style1 = row[9]
+          car_photo1 = row[10]
         
         cursor2 = mysql.connection.cursor()
         cursor2.execute('INSERT INTO jackfavorites VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', (vin1, make1, model1, year1, color1, mileage1, price1, our_price1, transmission1, body_style1,car_photo1, UserID,))
