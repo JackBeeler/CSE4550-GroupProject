@@ -1357,7 +1357,7 @@ def employeeVehicleListingEditPage():
         username6 = session['username']
         editingVehicleVin = session.get('editingVehicleVin', None)
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin)
+        cursor.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
         data = cursor.fetchall()
         numRows = cursor.rowcount
         vin = data['vin']
