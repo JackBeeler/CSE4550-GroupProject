@@ -1387,7 +1387,7 @@ def employeeVehicleListingEditPage():
        year = request.form['year']
        color = request.form['color']
        mileage = request.form['mileage']
-       price = request.from['price']
+       price = request.form['price']
        our_price = request.form['our_price']
        transmission = request.form['transmission']
        body_style = request.form['body_style']
@@ -1395,7 +1395,7 @@ def employeeVehicleListingEditPage():
        cursor.execute('UPDATE inventory SET  make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s', (make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo,))
        mysql.connection.commit()
         
-                      
+    if 'username' in session:                  
        return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, dataDict=dataDict,vin1=vin1,make1=make1,model1=model1,year1=year1,color1=color1,mileage1=mileage1,price1=price1,our_price1=our_price1,transmission1=transmission1,body_style1=body_style1,car_photo1=car_photo1)
     else:
        return render_template('employeeVehicleListingEditPage.html', data=data, numRows=numRows)
