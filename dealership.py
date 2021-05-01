@@ -1354,7 +1354,7 @@ def vehiclelisting():
 def addToFavorites():
     if 'username' in session:  
         username6 = session['username']
-        editingVehicleVin = session.get('editingVehicleVin', None)
+        editingVehicleVin = session['editingVehicleVin']
      
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
