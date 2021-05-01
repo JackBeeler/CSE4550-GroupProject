@@ -1392,7 +1392,7 @@ def employeeVehicleListingEditPage():
        transmission = request.form['transmission']
        body_style = request.form['body_style']
        car_photo = request.form['car_photo']
-       cursor.execute('UPDATE inventory SET  make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s', (make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo,))
+       cursor.execute('UPDATE inventory SET  make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s WHERE  vin = %s', (make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo, editingVehicleVin, ))
        mysql.connection.commit()
         
     if 'username' in session:                  
