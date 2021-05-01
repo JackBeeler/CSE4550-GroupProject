@@ -1381,10 +1381,19 @@ def employeeVehicleListingEditPage():
           
        
          
-    if request.method == 'POST' and 'vin' in request.form and 'make' in request.form and 'model' in request.form and 'year' in request.form:
-        cursor = mysql.connection.cursor()
-        cursor.execute('UPDATE inventory SET  make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s', (make1, model1, year1, color1, mileage1, price1, our_price1, transmission1, body_style1, car_photo1,))
-  
+    if request.method == 'POST' and 'vin' in request.form and 'make' in request.form and 'model' in request.form and 'year' in request.form and 'color' in request.form and 'mileage' in request.form and 'price' in request.form and 'our_price' in request.form and 'transmission' in request.from and 'body_style' in request.form:
+       make = request.form['make']
+       model = request.form['model']
+       year = request.form['year']
+       color = request.form['color']
+       mileage = request.form['mileage']
+       price = request.from['price']
+       our_price = request.form['our_price']
+       transmission = request.form['transmission']
+       body_style = request.form['body_style']
+       car_photo = request.form['car_photo']
+       cursor.execute('UPDATE inventory SET  make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s', (make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo,))
+       mysql.connection.commit()
         
                       
         return render_template('employeeVehicleListingEditPage.html',homepageusername = username6, dataDict=dataDict,vin1=vin1,make1=make1,model1=model1,year1=year1,color1=color1,mileage1=mileage1,price1=price1,our_price1=our_price1,transmission1=transmission1,body_style1=body_style1,car_photo1=car_photo1)
