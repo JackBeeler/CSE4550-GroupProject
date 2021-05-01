@@ -149,6 +149,8 @@ def logout():
     elif 'isEmployee' in session:
           session.pop('editingVehicleVin', None)
           session.pop('isEmployee', None)
+    elif 'editingVehicleVin' in session:
+          
     return redirect(url_for('login'))
 
 #contact
@@ -185,7 +187,7 @@ def searchresults1000001():
     if 'username' in session:  
         username5 = session['username'] 
         if 'isUser' in session:
-          
+          session['CurrentFavoritesVin'] = dataDict['vin']
           return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
         elif 'isEmployee' in session:
           session['editingVehicleVin'] = dataDict['vin']
@@ -1354,14 +1356,14 @@ def vehiclelisting():
 def addToFavorites():
     if 'username' in session:  
         username6 = session['username']
-        editingVehicleVin = session.get('editingVehicleVin', None)
+        editingVehicleVin = session.get('CurrentFavoritesVin', None)
      
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
         UserID = cursor.fetchone() 
          
         cursorDict = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (editingVehicleVin,))
+        cursorDict.execute('SELECT * FROM inventory WHERE vin  = %s', (CurrentFavoritesVin,))
         dataDict = cursorDict.fetchone()
         vin1 = dataDict['vin']
         make1 = dataDict['make']
