@@ -1392,16 +1392,15 @@ def addToFavorites():
 def deleteFavoritesVehicles():
      if 'username' in session:
       username6 = session['username']
-      VehicleDeleteVin = row[0]
       cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
       cur.execute('SELECT * FROM customer_login WHERE username = %s', (username6,))
       customer_login = cur.fetchone()
      if customer_login:
            CustomerID = customer_login['customer_id']
            cursor = mysql.connection.cursor()
-           cursor.execute('DELETE FROM jackfavorites WHERE id = %s and vin = %s ', (CustomerID, VehicleDeleteVin,))
+           cursor.execute('DELETE FROM jackfavorites WHERE id = %s ', (CustomerID,))
            msql.connection.commit()
-           return redirect(url_for('favorites'), VehicleDeleteVin = row[0] )
+           return redirect(url_for('favorites'))
      else:
         return redirect(url_for('favorites'))
      
