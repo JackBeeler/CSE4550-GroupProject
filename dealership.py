@@ -1399,7 +1399,7 @@ def deleteFavoritesVehicles():
            CustomerID = customer_login['customer_id']
            cursor = mysql.connection.cursor()
            cursor.execute('DELETE FROM jackfavorites WHERE id = %s ', (CustomerID,))
-           msql.connection.commit()
+           mysql.connection.commit()
            return redirect(url_for('favorites'))
      else:
         return redirect(url_for('favorites'))
