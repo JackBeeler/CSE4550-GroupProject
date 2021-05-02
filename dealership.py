@@ -762,7 +762,6 @@ def searchresults1000027():
 
 @app.route('/1000028')
 def searchresults1000028():
-    def searchresults1000028():
     cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000028"')
     cursor = mysql.connection.cursor()
