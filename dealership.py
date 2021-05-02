@@ -199,396 +199,629 @@ def searchresults1000001():
      
 @app.route('/1000002')
 def searchresults1000002():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000002"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000002"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('VehicleListing.html', data=data, numRows=numRows)     
+        return render_template('VehicleListing.html', data=data, numRows=numRows)
      
 @app.route('/1000003')
 def searchresults1000003():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000003"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000003"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
      
 @app.route('/1000004')
 def searchresults1000004():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000004"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000004"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000005')
 def searchresults1000005():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000005"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000005"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000006')
 def searchresults1000006():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000006"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000006"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000007')
 def searchresults1000007():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000007"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000007"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000008')
 def searchresults1000008():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000008"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000008"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000009')
 def searchresults1000009():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000009"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000009"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000010')
 def searchresults1000010():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000010"')
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE vin = "1000010"')
+    cursor.execute('SELECT * FROM inventory  WHERE vin = "10000010"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000011')
 def searchresults1000011():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000011"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000011"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000012')
 def searchresults1000012():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000012"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000012"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000013')
 def searchresults1000013():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000013"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000013"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000014')
 def searchresults1000014():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000014"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000014"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000015')
 def searchresults1000015():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000015"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000015"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000016')
 def searchresults1000016():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000016"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000016"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000017')
 def searchresults1000017():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000017"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000017"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000018')
 def searchresults1000018():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000018"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000018"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000019')
 def searchresults1000019():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000019"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000019"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000020')
 def searchresults1000020():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000020"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000020"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000021')
 def searchresults1000021():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000021"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000021"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000022')
 def searchresults1000022():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000022"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000022"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000023')
 def searchresults1000023():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000023"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000023"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000024')
 def searchresults1000024():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000024"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000024"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000025')
 def searchresults1000025():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000025"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000025"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000026')
 def searchresults1000026():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000026"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000026"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000027')
 def searchresults1000027():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000027"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000027"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000028')
 def searchresults1000028():
+    def searchresults1000028():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000028"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000028"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 @app.route('/1000029')
 def searchresults1000029():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000029"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000029"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
 
 @app.route('/1000030')
 def searchresults1000030():
+    cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000030"')
     cursor = mysql.connection.cursor()
     cursor.execute('SELECT * FROM inventory  WHERE vin = "1000030"')
+    dataDict = cursorDict.fetchone()
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
     if 'username' in session:  
         username5 = session['username'] 
-        return render_template('VehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
+        if 'isUser' in session:
+          session['CurrentFavoritesVin'] = dataDict['vin']
+          return render_template('VehicleListingLoggedIn.html',homepageusername = username5, data=data, numRows=numRows)
+        elif 'isEmployee' in session:
+          session['editingVehicleVin'] = dataDict['vin']
+          return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
 
