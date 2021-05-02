@@ -1388,7 +1388,7 @@ def addToFavorites():
     else:
         return redirect(url_for('favorites'))
 
-@app.route('/deleteFavoritesVehicles', methods=['GET', 'POST'])
+@app.route('/deleteFavoritesVehicles')
 def deleteFavoritesVehicles():
      if 'username' in session:
       username6 = session['username']
@@ -1400,8 +1400,10 @@ def deleteFavoritesVehicles():
            CustomerID = customer_login['customer_id']
            cursor = mysql.connection.cursor()
            cursor.execute('DELETE FROM jackfavorites WHERE id = %s and vin = %s ', (CustomerID, VehicleDeleteVin,))
-           cursor.commit()
-     return redirect(url_for('favorites'))
+           msql.connection.commit()
+           return redirect(url_for('favorites'))
+     else:
+        return redirect(url_for('favorites'))
      
 
 
