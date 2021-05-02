@@ -1392,7 +1392,7 @@ def addToFavorites():
 def deleteFavoritesVehicles():
      if 'username' in session:
       username6 = session['username']
-      VehicleDeleteVin
+      VehicleDeleteVin = row[0]
       cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
       cur.execute('SELECT * FROM customer_login WHERE username = %s', (username6,))
       customer_login = cur.fetchone()
