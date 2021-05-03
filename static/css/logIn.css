@@ -1,5 +1,5 @@
 
-#email{
+#username{
 	margin-left: 40%;
 	border-radius: 10px;
 }
@@ -94,7 +94,6 @@ input[type=text], input[type=email] {
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  display: block;
   height: 40px;
   margin: 8px 0;
   position: relative;
