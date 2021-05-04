@@ -146,7 +146,8 @@ margin: auto;
 
 .search-box  button {
   position: relative;
-	right: 40px;
+bottom: 40px;
+    left: 700px;
  border-radius: 50px;
 background-color:#9A9A9A;
   font-size: 17px;
