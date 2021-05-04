@@ -115,6 +115,7 @@
         {% endfor %}
     </tbody>
 </table>
+	  <div class = "editTable">
 	 <form action='/employeeVehicleListingEditPage' method='post'>
 <br>
 VIN: <input type='text' name='vin' id = 'vin' value="{{vin1}}" required><br>
@@ -132,6 +133,7 @@ Photo: <input type='text' name='car_photo' id = 'car_photo' value="{{car_photo1}
 <div class="msg">{{ msg }}</div>
 <input type ='submit'>
 </form>
+	  </div>
 	  
 <a href="deleteVehicleListing"><button type="button">Delete Vehicle</button></a>	  
 	  
