@@ -1,4 +1,9 @@
 ﻿
+.editTable{
+	color: yellowgreen;
+	border-radius: 25px;
+}
+
 #editButton{
 	border-radius: 50%;
 	background-color: #4CAF50; /* Green */
