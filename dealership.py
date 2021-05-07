@@ -1646,7 +1646,7 @@ def employeeVehicleAddCarPage():
     cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursor1.execute('SELECT MAX(vin) FROM inventory')
     data1 = cursor1.fetchone()
-    newVin = data1['vin']
+    newVin = data1['MAX(vin)']
     newVin +=1
     
                   
