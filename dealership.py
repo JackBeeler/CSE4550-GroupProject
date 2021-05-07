@@ -1637,6 +1637,10 @@ def deleteFavoritesVehicles():
         return redirect(url_for('favorites'))
      
 
+@app.route('/employeeVehicleAddingCarPage', methods=['GET', 'POST'])
+def employeeVehicleAddingCarPage():     
+     return redirect(url_for('employeeVehicleAddCarPage'))
+     
 @app.route('/employeeVehicleAddCarPage', methods=['GET', 'POST'])
 def employeeVehicleAddCarPage():
     cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -1660,6 +1664,12 @@ def employeeVehicleAddCarPage():
        car_photo = request.form['car_photo']
        cursor.execute('INSERT INTO inventory newVin = %s make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s WHERE  vin = %s', (newVin, make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo, editingVehicleVin,))
        mysql.connection.commit()
+       
+       
+        if 'username' in session:                  
+       return render_template('employeeVehicleListingAddCarPage.html',homepageusername = username6,)
+    else:
+       return render_template('employeeVehicleListingAddCarPage.html', )
                     
                     
                     
