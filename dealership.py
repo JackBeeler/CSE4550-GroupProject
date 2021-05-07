@@ -1662,6 +1662,7 @@ def employeeVehicleAddCarPage():
        transmission = request.form['transmission']
        body_style = request.form['body_style']
        car_photo = request.form['car_photo']
+       cursor = mysql.connection.cursor()
        cursor.execute('INSERT INTO inventory newVin = %s make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s WHERE  vin = %s', (newVin, make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo, editingVehicleVin,))
        mysql.connection.commit()
        
