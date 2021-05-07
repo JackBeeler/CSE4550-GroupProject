@@ -1645,6 +1645,7 @@ def employeeVehicleListingAddCarPage():
     newVin = data1
     newVin +=1
     
+                  
                     
     if request.method == 'POST' and 'make' in request.form  and 'color' in request.form:
        make = request.form['make']
