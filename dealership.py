@@ -848,7 +848,7 @@ def searchresults1000031():
      
      
      
- @app.route('/1000032')
+@app.route('/1000032')
 def searchresults1000032():
     cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000032"')
@@ -871,7 +871,7 @@ def searchresults1000032():
      
      
      
-  @app.route('/1000033')
+@app.route('/1000033')
 def searchresults1000030():
     cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursorDict.execute('SELECT * FROM inventory  WHERE vin = "1000033"')
@@ -914,24 +914,9 @@ def searchresults1000034():
           session['editingVehicleVin'] = dataDict['vin']
           return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
-        return render_template('VehicleListing.html', data=data, numRows=numRows)     
+        return render_template('VehicleListing.html', data=data, numRows=numRows)    
      
-#ABOVE THIS LINE IS THE LINKING TO EACH VECHICLE'S INDIVIDUAL LISTING PAGE     
-@app.route('/hatchbacks')
-def searchresultshatchbacks():
-    cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE body_style = "hatchback"')
-    data = cursor.fetchall()
-    numRows = cursor.rowcount
-
-    if 'username' in session:  
-        username5 = session['username'] 
-        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
-    else:
-        return render_template('SearchResults.html', data=data, numRows=numRows)   
-        
-      
-      
+     
 @app.route('/1000035')
 def searchresults1000035():
     cursorDict =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -952,6 +937,25 @@ def searchresults1000035():
           return render_template('employeeVehicleListing.html',homepageusername = username5, data=data, numRows=numRows)
     else:
         return render_template('VehicleListing.html', data=data, numRows=numRows)
+     
+#ABOVE THIS LINE IS THE LINKING TO EACH VECHICLE'S INDIVIDUAL LISTING PAGE    
+
+@app.route('/hatchbacks')
+def searchresultshatchbacks():
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT * FROM inventory  WHERE body_style = "hatchback"')
+    data = cursor.fetchall()
+    numRows = cursor.rowcount
+
+    if 'username' in session:  
+        username5 = session['username'] 
+        return render_template('SearchResults.html',homepageusername = username5, data=data, numRows=numRows)
+    else:
+        return render_template('SearchResults.html', data=data, numRows=numRows)   
+        
+      
+      
+
       
       
 @app.route('/sedans')
