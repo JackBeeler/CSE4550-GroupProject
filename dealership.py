@@ -1637,8 +1637,8 @@ def deleteFavoritesVehicles():
         return redirect(url_for('favorites'))
      
 
-@app.route('/employeeVehicleListingAddCarPage', methods=['GET', 'POST'])
-def employeeVehicleListingAddCarPage():
+@app.route('/employeeVehicleAddCarPage', methods=['GET', 'POST'])
+def employeeVehicleAddCarPage():
     cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursor1.execute('SELECT MAX(vin) FROM inventory')
     data1 = cursor.fetchone()
