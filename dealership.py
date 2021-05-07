@@ -1640,7 +1640,7 @@ def deleteFavoritesVehicles():
 @app.route('/employeeVehicleListingAddCarPage', methods=['GET', 'POST'])
 def employeeVehicleListingAddCarPage():
     cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    cursor1.execute('SELECT MAX(vin) FROM inventory)
+    cursor1.execute('SELECT MAX(vin) FROM inventory')
     data1 = cursor.fetchone()
     newVin = data1
     newVin +=1
