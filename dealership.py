@@ -1637,7 +1637,31 @@ def deleteFavoritesVehicles():
         return redirect(url_for('favorites'))
      
 
-
+@app.route('/employeeVehicleListingAddCarPage', methods=['GET', 'POST'])
+def employeeVehicleListingAddCarPage():
+    cursor1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor1.execute('SELECT MAX(vin) FROM inventory)
+    data1 = cursor.fetchone()
+    newVin = data1
+    newVin +=1
+    
+                    
+    if request.method == 'POST' and 'make' in request.form  and 'color' in request.form:
+       make = request.form['make']
+       model = request.form['model']
+       year = request.form['year']
+       color = request.form['color']
+       mileage = request.form['mileage']
+       price = request.form['price']
+       our_price = request.form['our_price']
+       transmission = request.form['transmission']
+       body_style = request.form['body_style']
+       car_photo = request.form['car_photo']
+       cursor.execute('INSERT INTO inventory newVin = %s make = %s, model = %s, year = %s, color = %s, mileage = %s, price = %s, our_price = %s, transmission = %s, body_style = %s, car_photo = %s WHERE  vin = %s', (newVin, make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo, editingVehicleVin,))
+       mysql.connection.commit()
+                    
+                    
+                    
 
 @app.route('/employeeVehicleListingEditPage', methods=['GET', 'POST'])
 def employeeVehicleListingEditPage():
