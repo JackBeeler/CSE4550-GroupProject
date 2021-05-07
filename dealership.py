@@ -1666,7 +1666,8 @@ def employeeVehicleAddCarPage():
        mysql.connection.commit()
        
        
-    if 'username' in session:                  
+    if 'username' in session: 
+       username6= session['username']
        return render_template('employeeVehicleListingAddCarPage.html',homepageusername = username6,)
     else:
        return render_template('employeeVehicleListingAddCarPage.html', )
