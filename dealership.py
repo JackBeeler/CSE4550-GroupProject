@@ -71,7 +71,7 @@ def signup():
         elif not email or not password:
             msg = 'Please fill out the form!'
         else:
-            cursor.execute('INSERT INTO customer_login VALUES (NULL, %s, %s, %s)', (email, password, username))
+            cursor.execute('INSERT INTO customer_login VALUES (NULL, %s, %s, %s)', (username, password, username))
             cursor.execute('INSERT INTO customer (customer_photo) VALUES (default)')
             mysql.connection.commit()
             msg = "You have successfully registered!"
