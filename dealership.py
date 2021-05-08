@@ -1784,6 +1784,7 @@ def employeeVehicleAddCarPage():
        cursor = mysql.connection.cursor()
        cursor.execute('INSERT INTO inventory VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', (newVin, make, model, year, color, mileage, price, our_price, transmission, body_style, car_photo,))
        mysql.connection.commit()
+       return redirect(url_for('searchresults'))
        
        
     if 'username' in session: 
