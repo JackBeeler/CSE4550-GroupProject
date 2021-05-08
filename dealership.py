@@ -1788,9 +1788,9 @@ def employeeVehicleAddCarPage():
        
     if 'username' in session: 
        username6= session['username']
-       return redirect(url_for('searchresults'))
+       return render_template('employeeVehicleListingAddCarPage.html',homepageusername = username6,)
     else:
-       return redirect(url_for('searchresults'))
+       return render_template('employeeVehicleListingAddCarPage.html', )
                     
                     
                     
