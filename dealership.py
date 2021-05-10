@@ -57,7 +57,7 @@ def homepage():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     msg = ''
-    if request.method == 'POST' and 'email' in request.form and 'password' in request.form:
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         username = request.form['username']
         password = request.form['password']
         email = request.form['username']
