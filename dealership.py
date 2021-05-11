@@ -1861,7 +1861,7 @@ def employeeVehicleListingEditPage():
 @app.route('/deleteVehicleListing')
 def deleteVehicleListing():
     if 'username' in session:  
-        username6 = session['email'] 
+        username6 = session['username'] 
         editingVehicleVin = session.get('editingVehicleVin', None)
         cursor = mysql.connection.cursor()
         cursor.execute('DELETE FROM inventory WHERE vin = %s',(editingVehicleVin,))
@@ -1880,7 +1880,7 @@ def deleteVehicleListing():
 @app.route('/favorites')
 def favorites():
      if 'username' in session:  
-        username6 = session['email']
+        username6 = session['username']
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur.execute('SELECT * FROM customer_login WHERE email = %s', (username6,))
         customer_login = cur.fetchone()
