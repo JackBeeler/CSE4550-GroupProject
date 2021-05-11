@@ -98,9 +98,14 @@ def login():
         if customer_login:
             session['loggedin'] = True
             session['customer_id'] = customer_login['customer_id']
-            session['username'] = customer_login['username']
+           
             session['isUser'] = True
             msg = 'Success'
+            regexStr = r'^([^@]+)@[^@]+$'
+            emailStr = customer_login['username']
+            matchobj = re.search(regexStr, emailStr)
+            if not matchobj is None:
+             session['username'] =  matchobj.group(1)
             return redirect(url_for('homepagelogged', msg=msg,))
         else:
             # Check if the person is an employee trying to log in
@@ -111,8 +116,14 @@ def login():
             if employeelogin:
              session['loggedin'] = True
              session['employee_id'] = employeelogin['employee_id']
-             session['username'] = employeelogin['username']
+             
              session['isEmployee'] = True
+             msg = 'Success'
+             regexStr = r'^([^@]+)@[^@]+$'
+             emailStr = employeelogin['username']
+             matchobj = re.search(regexStr, emailStr)
+             if not matchobj is None:
+              session['username'] =  matchobj.group(1)
              
              return redirect(url_for('homepagelogged', msg=msg,))
             else: 
