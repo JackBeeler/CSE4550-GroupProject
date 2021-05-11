@@ -1918,6 +1918,7 @@ def favorites():
                   msg = "You have no favorites"
                   return render_template('favorites.html',homepageusername = username6, msg = msg, numRows=0)
      
+     
         
      else:
         return render_template('SignUp.html')
