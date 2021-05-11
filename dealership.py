@@ -22,8 +22,13 @@ mysql = MySQL(app)
 @app.route('/', methods=['GET', 'POST'])
 def homepage():
      
-     if 'username'  in session:
-         username2 = session['username']
+         if 'username'  in session:
+         regexStr = r'^([^@]+)@[^@]+$'
+         emailStr = session['username']
+         matchobj = re.search(regexStr, emailStr)
+         if not matchobj is None:
+          username2 =  matchobj.group(1)
+         
      
          if request.method == 'POST' and 'search' in request.form:
           Search = request.form['search']
