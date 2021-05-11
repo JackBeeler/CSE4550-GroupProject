@@ -1718,11 +1718,11 @@ def vehiclelisting():
 @app.route('/addToFavorites')
 def addToFavorites():
     if 'username' in session:  
-        username6 = session['username']
+        username6 = session['email']
         editingVehicleVin = session.get('CurrentFavoritesVin', None)
      
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT customer_id  FROM customer_login WHERE username = %s', (username6,))
+        cursor.execute('SELECT customer_id  FROM customer_login WHERE email = %s', (username6,))
         UserIDData = cursor.fetchone()
         UserID = UserIDData['customer_id']
          
@@ -1753,9 +1753,9 @@ def addToFavorites():
 @app.route('/deleteFavoritesVehicles')
 def deleteFavoritesVehicles():
      if 'username' in session:
-      username6 = session['username']
+      username6 = session['email']
       cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-      cur.execute('SELECT * FROM customer_login WHERE username = %s', (username6,))
+      cur.execute('SELECT * FROM customer_login WHERE email = %s', (username6,))
       customer_login = cur.fetchone()
      if customer_login:
            CustomerID = customer_login['customer_id']
