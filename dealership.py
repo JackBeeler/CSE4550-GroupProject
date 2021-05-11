@@ -1898,7 +1898,7 @@ def favorites():
                return  render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows = numRows)
             else: 
                msg = "You have no favorites"
-               return render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows=0)
+               return render_template('favorites.html',homepageusername = username6, msg = msg, numRows=0)
                     
         else:
             # Check if the person is an employee EMPLOYEEE FAVORITES THEN NEEDS TO HAVE POST TO EDII/ADD VEHICLES ALSO
@@ -1916,7 +1916,7 @@ def favorites():
                   return render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows=numRows)
                else: 
                     msg = "You have no favorites"
-                    return render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows=0)
+                    return render_template('favorites.html',homepageusername = username6, msg = msg, numRows=0)
      
         
      else:
