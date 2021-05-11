@@ -1883,7 +1883,7 @@ def deleteVehicleListing():
 def favorites():
      if 'username' in session:  
         username6 = session['username']
-        userEmail = session['email"]
+        userEmail = session['email']
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur.execute('SELECT * FROM customer_login WHERE email = %s', (userEmail,))
         customer_login = cur.fetchone()
@@ -1903,7 +1903,7 @@ def favorites():
         else:
             # Check if the person is an employee EMPLOYEEE FAVORITES THEN NEEDS TO HAVE POST TO EDII/ADD VEHICLES ALSO
             cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cur1.execute('SELECT * FROM employee_login WHERE email = %s',(username6,))
+            cur1.execute('SELECT * FROM employee_login WHERE email = %s',(userEmail,))
             employee_login = cur1.fetchone()
             if employee_login:
                EmployeeID = employee_login['employee_id']
