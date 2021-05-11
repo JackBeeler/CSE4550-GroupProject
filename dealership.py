@@ -85,7 +85,15 @@ def signup():
 def login():
     msg = ''
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-        username = request.form['username']
+        
+     
+       regexStr = r'^([^@]+)@[^@]+$'
+       emailStr = request.form['username']
+       matchobj = re.search(regexStr, emailStr)
+       if not matchobj is None:
+            username =  matchobj.group(1)
+       else:
+            username = request.form['username']    
         password = request.form['password']
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cur.execute('SELECT * FROM customer_login WHERE username = %s AND password = %s', (username, password,))
