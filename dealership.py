@@ -87,12 +87,12 @@ def login():
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         
      
-       regexStr = r'^([^@]+)@[^@]+$'
-       emailStr = request.form['username']
-       matchobj = re.search(regexStr, emailStr)
-       if not matchobj is None:
+        regexStr = r'^([^@]+)@[^@]+$'
+        emailStr = request.form['username']
+        matchobj = re.search(regexStr, emailStr)
+        if not matchobj is None:
             username =  matchobj.group(1)
-       else:
+        else:
             username = request.form['username']    
         password = request.form['password']
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
