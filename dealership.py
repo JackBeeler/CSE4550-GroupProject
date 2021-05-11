@@ -88,7 +88,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cur.execute('SELECT * FROM customer_login WHERE username = %s AND password = %s', (username, password,))
+        cur.execute('SELECT * FROM customer_login WHERE email or username = %s AND password = %s', (username, password,))
         customer_login = cur.fetchone()
         if customer_login:
             session['loggedin'] = True
@@ -106,7 +106,7 @@ def login():
             # Check if the person is an employee trying to log in
            # msg = 'Wrong username/password'
             cur1 = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cur1.execute('SELECT * FROM employee_login WHERE username = %s and password = %s', (username, password,))
+            cur1.execute('SELECT * FROM employee_login WHERE email or username = %s and password = %s', (username, password,))
             employeelogin = cur1.fetchone()
             if employeelogin:
              session['loggedin'] = True
