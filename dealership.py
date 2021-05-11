@@ -1721,11 +1721,12 @@ def vehiclelisting():
 @app.route('/addToFavorites')
 def addToFavorites():
     if 'username' in session:  
-        username6 = session['email']
+        username6 = session['username']
+        emaily = session['email']
         editingVehicleVin = session.get('CurrentFavoritesVin', None)
      
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT customer_id  FROM customer_login WHERE email = %s', (username6,))
+        cursor.execute('SELECT customer_id  FROM customer_login WHERE email = %s', (emaily,))
         UserIDData = cursor.fetchone()
         UserID = UserIDData['customer_id']
          
@@ -1756,9 +1757,10 @@ def addToFavorites():
 @app.route('/deleteFavoritesVehicles')
 def deleteFavoritesVehicles():
      if 'username' in session:
-      username6 = session['email']
+      username6 = session['username']
+      email1 = session['email']
       cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-      cur.execute('SELECT * FROM customer_login WHERE email = %s', (username6,))
+      cur.execute('SELECT * FROM customer_login WHERE email = %s', (email1,))
       customer_login = cur.fetchone()
      if customer_login:
            CustomerID = customer_login['customer_id']
@@ -1881,8 +1883,9 @@ def deleteVehicleListing():
 def favorites():
      if 'username' in session:  
         username6 = session['username']
+        userEmail = session['email"]
         cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cur.execute('SELECT * FROM customer_login WHERE email = %s', (username6,))
+        cur.execute('SELECT * FROM customer_login WHERE email = %s', (userEmail,))
         customer_login = cur.fetchone()
         if customer_login:
             CustomerID = customer_login['customer_id']
