@@ -1915,8 +1915,8 @@ def favorites():
                   numRows = cursor.rowcount
                   return render_template('favorites.html',homepageusername = username6, msg = msg, data=data, numRows=numRows)
                else: 
-                    msg = "You have no favorites"
-                    return render_template('favorites.html',homepageusername = username6, msg = msg, numRows=0)
+                  msg = "You have no favorites"
+                  return render_template('favorites.html',homepageusername = username6, msg = msg, numRows=0)
      
         
      else:
