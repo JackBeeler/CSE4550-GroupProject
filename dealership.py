@@ -74,7 +74,9 @@ def signup():
             cursor.execute('INSERT INTO customer_login VALUES (NULL, %s, %s, %s)', (email, password, username))
             cursor.execute('INSERT INTO customer (customer_photo) VALUES (default)')
             mysql.connection.commit()
-            msg = "You have successfully registered!"
+            msg = "You have successfully registered! Enjoy the Site! Redirecting to Homepage"
+            time.sleep(5)
+            return redirect(url_for('homepagelogged', msg=msg,))
             
     elif request.method == 'POST':
         msg = 'Please fill the form!'
