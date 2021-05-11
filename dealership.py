@@ -93,7 +93,7 @@ def login():
         if customer_login:
             session['loggedin'] = True
             session['customer_id'] = customer_login['customer_id']
-           
+            session['email'] = customer_login['email']
             session['isUser'] = True
             msg = 'Success'
             regexStr = r'^([^@]+)@[^@]+$'
@@ -111,7 +111,7 @@ def login():
             if employeelogin:
              session['loggedin'] = True
              session['employee_id'] = employeelogin['employee_id']
-             
+             session['email'] = employeelogin['employee_id']
              session['isEmployee'] = True
              msg = 'Success'
              regexStr = r'^([^@]+)@[^@]+$'
