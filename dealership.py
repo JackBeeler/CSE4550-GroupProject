@@ -3,7 +3,7 @@ from flask_mysqldb import MySQL
 import yaml, os
 import MySQLdb.cursors
 import re
-import time
+
 
 app = Flask(__name__)
  
@@ -75,9 +75,7 @@ def signup():
             cursor.execute('INSERT INTO customer_login VALUES (NULL, %s, %s, %s)', (email, password, username))
             cursor.execute('INSERT INTO customer (customer_photo) VALUES (default)')
             mysql.connection.commit()
-            msg = "You have successfully registered! Enjoy the Site! Redirecting to Homepage"
-            time.sleep(5)
-            return redirect(url_for('homepagelogged', msg=msg,))
+            msg = "You have successfully registered! Enjoy the Site! 
             
     elif request.method == 'POST':
         msg = 'Please fill the form!'
@@ -1863,7 +1861,7 @@ def employeeVehicleListingEditPage():
 @app.route('/deleteVehicleListing')
 def deleteVehicleListing():
     if 'username' in session:  
-        username6 = session['username'] 
+        username6 = session['email'] 
         editingVehicleVin = session.get('editingVehicleVin', None)
         cursor = mysql.connection.cursor()
         cursor.execute('DELETE FROM inventory WHERE vin = %s',(editingVehicleVin,))
