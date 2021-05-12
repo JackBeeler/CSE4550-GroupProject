@@ -1589,7 +1589,7 @@ def searchresultswhite():
 @app.route('/green')
 def searchresultsgreen():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE color LIKE %green%')
+    cursor.execute('SELECT * FROM inventory  WHERE color LIKE "%green%"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
