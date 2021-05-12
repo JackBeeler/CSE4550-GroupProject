@@ -1516,7 +1516,7 @@ def searchresultsprice25000():
 @app.route('/black')
 def searchresultsblack():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE color = "black"')
+    cursor.execute('SELECT * FROM inventory  WHERE color like "%black%"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -1530,7 +1530,7 @@ def searchresultsblack():
 @app.route('/blue')
 def searchresultsblue():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE color = "blue"')
+    cursor.execute('SELECT * FROM inventory  WHERE color like "%blue%"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -1544,7 +1544,7 @@ def searchresultsblue():
 @app.route('/grey')
 def searchresultsgrey():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE color = "grey"')
+    cursor.execute('SELECT * FROM inventory  WHERE color like "%grey%"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -1559,7 +1559,7 @@ def searchresultsgrey():
 @app.route('/silver')
 def searchresultssilver():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE color = "silver"')
+    cursor.execute('SELECT * FROM inventory  WHERE color like "%silver%"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -1574,7 +1574,7 @@ def searchresultssilver():
 @app.route('/white')
 def searchresultswhite():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE color = "white"')
+    cursor.execute('SELECT * FROM inventory  WHERE color like "%white%"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
@@ -1604,7 +1604,7 @@ def searchresultsgreen():
 @app.route('/red')
 def searchresultsred():
     cursor = mysql.connection.cursor()
-    cursor.execute('SELECT * FROM inventory  WHERE color = "red"')
+    cursor.execute('SELECT * FROM inventory  WHERE color like "%red%"')
     data = cursor.fetchall()
     numRows = cursor.rowcount
 
