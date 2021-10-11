@@ -1,2 +1,4 @@
-Hi there
-nnnn
+---
+layout: default
+title: Hello
+---
