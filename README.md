@@ -1,4 +1,4 @@
-#LemonsAndLimes Car Delaership
+LemonsAndLimes Car Delaership
 ## Final Project-Software-Engineering-2021 
 
 This project was created using the following:
